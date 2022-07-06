@@ -1,0 +1,10 @@
+add_rules("mode.debug")
+add_requires('nlohmann_json')
+
+target('PLDCreator')
+    set_symbols("debug")
+    set_kind('binary')
+    set_languages('cxx17')
+    add_files('src/*.cpp')
+    add_includedirs('include')
+    add_packages('nlohmann_json')

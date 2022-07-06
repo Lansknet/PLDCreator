@@ -1,0 +1,24 @@
+{
+    "userStories": [
+        {
+            "Name" : "Page Login",
+            "Description": "Il faut avoir une page d’authentification afin que les utilisateurs puissent accéder au service Lansknet via leurs identifiants de manière sécurisé (email et mot de passe). ",
+            "EstimatedTime": "2",
+            "AsA": "Utilisateur du logiciel Lansknet ",
+            "IWant": "Être en mesure de me connecter avec les droits qui me sont attribués et d’obtenir les informations correspondant à mon niveau d’implication. ",
+            "DoD": [
+                {
+                    "Description": "Avoir une page web contenant...",
+                    "bullets": [
+                        "Un champ pour rentrer son mot de passe",
+                        "Un champ pour rentrer son identifiant (email)",
+                        "Un bouton connexion "
+                    ]
+                },
+                {
+                    "Description" : "    Pouvoir identifier l’utilisateur entrant dans la base de données afin de récupérer ses préférences et données"
+                }
+            ]
+        }
+    ]
+}

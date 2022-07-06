@@ -1,0 +1,24 @@
+{
+    "filename": "pld.html",
+    "cssPath": "./style.css",
+    "htmlPrefix": "prefix.html",
+    "htmlSufix": "sufix.html",
+    "tags": {
+        "UserStories":{
+            "Section": "h1",
+            "Name": "h2",
+            "EstimatedTime": "p",
+            "Description": "h3",
+            "AsA": "p",
+            "IWant": "p",
+            "DoD": {
+                "Section": "h3",
+                "Description": "p",
+                "Bullets": {
+                    "list": "ul",
+                    "listElement": "li"
+                }
+            }
+        }
+    }
+}
