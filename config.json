@@ -1,22 +1,59 @@
 {
-    "filename": "pld.html",
-    "cssPath": "./style.css",
-    "htmlPrefix": "prefix.html",
-    "htmlSufix": "sufix.html",
-    "tags": {
-        "UserStories":{
-            "Section": "h1",
-            "Name": "h2",
-            "EstimatedTime": "p",
-            "Description": "h3",
-            "AsA": "p",
-            "IWant": "p",
+    "PLDJsonFile": "./pld.json",
+    "ModulesPath": "./modules/",
+    "OutputType": "HTML",
+    "Filename": "pld.html",
+    "CssPath": "./assets/style.css",
+    "HtmlPrefix": "./assets/prefix",
+    "HtmlSufix": "./assets/sufix",
+    "Tags": {
+        "UserStories": {
+            "Section": [
+                "<h1>",
+                "</h1>"
+            ],
+            "Name": [
+                "<h2>",
+                "</h2>"
+            ],
+            "EstimatedTime": [
+                "<p>",
+                "</p>"
+            ],
+            "Description": [
+                "<h3>",
+                "</h3>"
+            ],
+            "DescriptionText": [
+                "<p>",
+                "</p>"
+            ],
+            "AsA": [
+                "<p>",
+                "</p>"
+            ],
+            "IWant": [
+                "<p>",
+                "</p>"
+            ],
             "DoD": {
-                "Section": "h3",
-                "Description": "p",
+                "Section": [
+                    "<h3>",
+                    "</h3>"
+                ],
+                "Description": [
+                    "<p>",
+                    "</p>"
+                ],
                 "Bullets": {
-                    "list": "ul",
-                    "listElement": "li"
+                    "list": [
+                        "<ul>",
+                        "</ul>"
+                    ],
+                    "listElement": [
+                        "<li>",
+                        "</li>"
+                    ]
                 }
             }
         }

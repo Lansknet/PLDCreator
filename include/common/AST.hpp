@@ -1,8 +1,16 @@
+/*
+** EPITECH PROJECT, 2022
+** Documents [SSH: x2024lansknet1202373699000.westeurope.cloudapp.azure.com]
+** File description:
+** AST
+*/
+
+#ifndef AST_HPP_
+#define AST_HPP_
+
 #include <vector>
 #include <any>
 #include <memory>
-
-#pragma once
 
 struct AST
 {
@@ -17,10 +25,12 @@ struct AST
         EstimatedTime,
         AsA,
         IWant,
+        DoDArray,
         DoD,
         Bullets
     };
-    AST(Type _type) : type(_type) {}
+    AST(Type _type) : type(_type), value(), next() {}
+    AST(Type _type, std::any any) : type(_type), value(std::move(any)), next() {}
     Type type = Null;
     bool visited = false;
     std::any value;
@@ -28,3 +38,5 @@ struct AST
 };
 
 using AstPtr = std::unique_ptr<AST>;
+
+#endif /* !AST_HPP_ */
