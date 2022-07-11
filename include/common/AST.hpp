@@ -27,7 +27,8 @@ struct AST
         IWant,
         DoDArray,
         DoD,
-        Bullets
+        Bullets,
+        AssignmentTable
     };
     AST(Type _type) : type(_type), value(), next() {}
     AST(Type _type, std::any any) : type(_type), value(std::move(any)), next() {}

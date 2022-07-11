@@ -1,7 +1,7 @@
 {
-    "userStories": [
+    "UserStories": [
         {
-            "Name" : "Page Login",
+            "Name": "Page Login",
             "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales sollicitudin massa. Etiam non ornare libero. Praesent venenatis scelerisque quam, quis dictum lorem ultrices in. Pellentesque ut tristique nisl. Aenean quis egestas massa. Sed suscipit augue eleifend ex imperdiet tristique. Suspendisse et orci eget quam ullamcorper sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
             "EstimatedTime": "2",
             "AsA": "Vivamus nulla justo, venenatis fermentum elit sit amet, bibendum condimentum massa.",
@@ -16,8 +16,23 @@
                     ]
                 },
                 {
-                    "Description" : "Cras volutpat vestibulum lectus, in varius est efficitur sed. Sed convallis, felis eget varius condimentum, leo nibh molestie sapien, in fringilla nisl orci at nisi. "
+                    "Description": "Cras volutpat vestibulum lectus, in varius est efficitur sed. Sed convallis, felis eget varius condimentum, leo nibh molestie sapien, in fringilla nisl orci at nisi. "
                 }
+            ]
+        }
+    ],
+    "AssignmentTable": [
+        {
+            "Jean": [
+                "Etiam condimentum neque et justo tristique, nec sagittis eros rutrum",
+                "Nunc id lacus magna"
+            ]
+        },
+        {
+            "Pierre": [
+                "Etiam condimentum neque et justo tristique, nec sagittis eros rutrum",
+                "Nunc id lacus magna",
+                "Nulla lobortis eleifend vestibulum."
             ]
         }
     ]

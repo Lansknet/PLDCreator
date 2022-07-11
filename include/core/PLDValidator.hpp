@@ -16,6 +16,7 @@ class PLDValidator
         AstPtr parseUserStories(const Config::Array &array);
         AstPtr parseDoD(const Config::Array &array);
         AstPtr parseBullets(const Config::Array &array);
+        AstPtr parseAssignmentTable(const Config::Array &array);
         AstPtr _ast {};
 };
 

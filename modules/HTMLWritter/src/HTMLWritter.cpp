@@ -16,7 +16,7 @@ void HTMLWritter::write(AstPtr ast)
         return;
     Buffer buffer;
     buffer.reserve(0x186A0);
-    const Config::Array &section = _config["Tags"]["UserStories"]["Name"].as<Config::Array>();
+    const Config::Array &section = _config["Tags"]["Section"].as<Config::Array>();
     buffer += "<style>";
     Utils::copyFileContent(buffer, _config["CssPath"].as<Config::String>());
     buffer += "</style>";
@@ -25,7 +25,10 @@ void HTMLWritter::write(AstPtr ast)
         section[1]->as<Config::String>();
     for (auto &us : ast->next)
     {
-        writeUserStories(buffer, std::move(us));
+        if (us->type == AST::Type::UserStories)
+            writeUserStories(buffer, std::move(us));
+        else if (us->type == AST::Type::AssignmentTable)
+            writeAssignmentTable(buffer, std::move(us));
     }
     Utils::copyFileContent(buffer, _config["HtmlSufix"].as<Config::String>());
     std::ofstream out(_config["Filename"].as<Config::String>());
@@ -135,6 +138,33 @@ void HTMLWritter::writeBullets(Buffer &buffer, AstPtr ast)
         buffer += bulletsTags["listElement"][1].as<Config::String>();
     }
     buffer += bulletsTags["list"][1].as<Config::String>();
+}
+
+void HTMLWritter::writeAssignmentTable(Buffer &buffer, AstPtr ast)
+{
+    using Assignements = std::unordered_map<std::string, std::vector<std::string>>;
+    const Assignements &assignements = std::any_cast<const Assignements &>(ast->value);
+    const Config::Object &assignmentTable = _config["Tags"]["AssignmentTable"].as<Config::Object>();
+    const Config::Array &section = _config["Tags"]["Section"].as<Config::Array>();
+    buffer += section[0]->as<Config::String>();
+    buffer += "Tableau d'assignation";
+    buffer += section[0]->as<Config::String>();
+    buffer += assignmentTable["table"][0].as<Config::String>();
+    for (const auto &[name, elems] : assignements)
+    {
+        buffer += assignmentTable["tr"][0].as<Config::String>();
+        buffer += assignmentTable["td"][0].as<Config::String>();
+        buffer += name;
+        buffer += assignmentTable["td"][1].as<Config::String>();
+        buffer += assignmentTable["td"][0].as<Config::String>();
+        for (const auto &assignement : elems)
+        {
+            buffer += assignement + " ";
+        }
+        buffer += assignmentTable["td"][1].as<Config::String>();
+        buffer += assignmentTable["tr"][1].as<Config::String>();
+    }
+    buffer += assignmentTable["table"][1].as<Config::String>();
 }
 
 void HTMLWritter::create(const Config::Object &data)

@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <iostream>
 #include <vector>
+#include <unordered_map>
 #include "Config.hpp"
 #include "PLDValidator.hpp"
 #include "AST.hpp"
@@ -24,8 +25,10 @@ AstPtr PLDValidator::parseRoot(const Config::Object &object)
     AstPtr ast = std::make_unique<AST>(AST::Type::Root);
     for (auto &[key, value] : object)
     {
-        if (key == "userStories")
+        if (key == "UserStories")
             ast->next.push_back(parseUserStories(value->as<Config::Array>()));
+        else if (key == "AssignmentTable")
+            ast->next.push_back(parseAssignmentTable(value->as<Config::Array>()));
         else throw std::runtime_error("Invalid key in root: " + key);
     }
     return ast;
@@ -106,5 +109,26 @@ AstPtr PLDValidator::parseBullets(const Config::Array &array)
         bullets.push_back(value->as<Config::String>());
     }
     ast->value = std::make_any<std::vector<Config::String>>(std::move(bullets));
+    return ast;
+}
+
+AstPtr PLDValidator::parseAssignmentTable(const Config::Array &array)
+{
+    AstPtr ast = std::make_unique<AST>(AST::Type::AssignmentTable);
+    using Assignements = std::unordered_map<std::string, std::vector<std::string>>;
+    Assignements assignements;
+    for (auto assignmentTable : array)
+    {
+        for (const auto &[key, value] : assignmentTable->as<Config::Object>())
+        {
+            auto elements = value->as<Config::Array>();
+            std::vector<std::string> vec;
+            for (auto element : elements)
+            {
+                assignements[key].push_back(element->as<Config::String>());
+            }
+        }
+    }
+    ast->value = std::make_any<Assignements>(assignements);
     return ast;
 }

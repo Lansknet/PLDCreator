@@ -9,7 +9,10 @@ void MarkdownWritter::write(AstPtr ast)
     buffer.reserve(0x186A0);
     for (auto &us : ast->next)
     {
-        writeUserStories(buffer, std::move(us));
+        if (us->type == AST::Type::UserStories)
+            writeUserStories(buffer, std::move(us));
+        else if (us->type == AST::Type::AssignmentTable)
+            writeAssignmentTable(buffer, std::move(us));
     }
     std::ofstream out(_config["Filename"].as<Config::String>());
     out << buffer;
@@ -19,6 +22,7 @@ void MarkdownWritter::writeUserStories(Buffer &buffer, AstPtr ast)
 {
     if (ast->type != AST::Type::UserStories)
         return;
+    buffer += "## User stories\n\n";
     for (auto &usElem : ast->next)
     {
         if (usElem->type == AST::Type::Name)
@@ -102,6 +106,28 @@ void MarkdownWritter::writeBullets(Buffer &buffer, AstPtr ast)
         buffer += bullet;
         buffer += "\n\n";
     }
+}
+
+void MarkdownWritter::writeAssignmentTable(Buffer &buffer, AstPtr ast)
+{
+    using Assignements = std::unordered_map<std::string, std::vector<std::string>>;
+    const Assignements &assignements = std::any_cast<const Assignements &>(ast->value);
+
+    buffer += "## Tableau d'assignation\n\n";
+    buffer += "|  |  |\n";
+    buffer += "|--|--|\n";
+    for (const auto &[name, elems] : assignements)
+    {
+        buffer += "| ";
+        buffer += name;
+        buffer += " | ";
+        for (const auto &assignement : elems)
+        {
+            buffer += assignement + " ";
+        }
+        buffer += " |\n";
+    }
+    buffer += "\n\n";
 }
 
 void MarkdownWritter::create(const Config::Object &data)

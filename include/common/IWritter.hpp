@@ -17,6 +17,7 @@ class IWritter : public IModule
         virtual void writeString(Buffer &buffer, AstPtr ast) = 0;
         virtual void writeDoD(Buffer &buffer, AstPtr ast) = 0;
         virtual void writeBullets(Buffer &buffer, AstPtr ast) = 0;
+        virtual void writeAssignmentTable(Buffer &buffer, AstPtr ast) = 0;
 };
 
 #endif /* !IWRITTER_HPP_ */
