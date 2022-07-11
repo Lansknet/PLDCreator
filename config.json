@@ -1,8 +1,8 @@
 {
     "PLDJsonFile": "./pld.json",
     "ModulesPath": "./modules/",
-    "OutputType": "HTML",
-    "Filename": "pld.html",
+    "OutputType": "Markdown",
+    "Filename": "pld.md",
     "CssPath": "./assets/style.css",
     "HtmlPrefix": "./assets/prefix",
     "HtmlSufix": "./assets/sufix",

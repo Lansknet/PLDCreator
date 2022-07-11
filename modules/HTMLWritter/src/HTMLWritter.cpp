@@ -8,15 +8,7 @@
 #include <iostream>
 #include "IModule.hpp"
 #include "dylib.hpp"
-
-//TODO: this function should be moved to another file
-void copyFileContent(Buffer &buffer, const std::string &filename)
-{
-    std::ifstream css(filename);
-    std::ostringstream ss;
-    ss << css.rdbuf();
-    buffer += ss.str();
-}
+#include "Utils.hpp"
 
 void HTMLWritter::write(AstPtr ast)
 {
@@ -26,16 +18,16 @@ void HTMLWritter::write(AstPtr ast)
     buffer.reserve(0x186A0);
     const Config::Array &section = _config["Tags"]["UserStories"]["Name"].as<Config::Array>();
     buffer += "<style>";
-    copyFileContent(buffer, _config["CssPath"].as<Config::String>());
+    Utils::copyFileContent(buffer, _config["CssPath"].as<Config::String>());
     buffer += "</style>";
-    copyFileContent(buffer, _config["HtmlPrefix"].as<Config::String>());
+    Utils::copyFileContent(buffer, _config["HtmlPrefix"].as<Config::String>());
     buffer += section[0]->as<Config::String>() + "User Stories" + 
         section[1]->as<Config::String>();
     for (auto &us : ast->next)
     {
         writeUserStories(buffer, std::move(us));
     }
-    copyFileContent(buffer, _config["HtmlSufix"].as<Config::String>());
+    Utils::copyFileContent(buffer, _config["HtmlSufix"].as<Config::String>());
     std::ofstream out(_config["Filename"].as<Config::String>());
     out << buffer;
 }

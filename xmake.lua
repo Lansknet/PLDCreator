@@ -27,6 +27,19 @@ target("HTMLWritter")
         add_syslinks("dl")
     end
 
+target("MarkdownWritter")
+    add_files('modules/MarkdownWritter/src/*.cpp')
+    add_includedirs('modules/MarkdownWritter/include/', 'include/common/')
+    add_packages('nlohmann_json', 'dylib')
+    set_symbols("debug")
+    set_kind('shared')
+    set_languages('cxx20')
+    set_warnings('everything')
+    set_targetdir("$(buildir)/$(plat)/$(arch)/$(mode)/modules")
+    if (is_plat("linux")) then
+        add_syslinks("dl")
+    end
+
 target('PLDCreator')
     set_symbols("debug")
     set_kind('binary')
