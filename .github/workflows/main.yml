@@ -17,22 +17,22 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - uses: xmake-io/github-action-setup-xmake@v1
+        with:
+          xmake-version: latest
 
-      - name: update system dependencies
-        run: sudo apt update && sudo apt upgrade
-        
-      - name: install xmake
-        run: bash <(curl -fsSL https://xmake.io/shget.text)
-      
       - name: update xrepo
         run: xmake repo --update
-        
+
       - name: build
         run: xmake -yvD
