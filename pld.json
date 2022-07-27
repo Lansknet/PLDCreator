@@ -1,7 +1,74 @@
 {
+    "DeliverablesMap": [
+        {
+            "Client Web": {
+                "Authentification": [
+                    "Login Page front",
+                    "UserProfile"
+                ],
+                "Technic": [
+                    "ototototot",
+                    "ototototot",
+                    "ototototot"
+                ]
+            },
+            "Backend": {
+                "Authentification": [
+                    "2.1.1 Connexion manager et employé ",
+                    "Login Page back",
+                    "2.1.2 Affectation des droits d’accès "
+                ],
+                "Technic": [
+                    "2.2.1 Mise en place de la BDD",
+                    "2.2.2 Liaison avec l’API GoPhish",
+                    "2.2.3 Tests unitaires pour les méthodes existantes "
+                ]
+            }
+        }
+    ],
     "UserStories": [
         {
             "Name": "Page Login",
+            "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales sollicitudin massa. Etiam non ornare libero. Praesent venenatis scelerisque quam, quis dictum lorem ultrices in. Pellentesque ut tristique nisl. Aenean quis egestas massa. Sed suscipit augue eleifend ex imperdiet tristique. Suspendisse et orci eget quam ullamcorper sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+            "EstimatedTime": "2",
+            "AsA": "Vivamus nulla justo, venenatis fermentum elit sit amet, bibendum condimentum massa.",
+            "IWant": "Integer pellentesque feugiat mi, quis maximus mi condimentum id. Cras finibus, eros sed faucibus iaculis, est ipsum faucibus tellus, nec semper velit dui vel massa. ",
+            "DoD": [
+                {
+                    "Description": "Curabitur vitae gravida risus, ut efficitur elit...",
+                    "Bullets": [
+                        "Etiam condimentum neque et justo tristique, nec sagittis eros rutrum.",
+                        "Nunc id lacus magna. Cras suscipit ante sapien, non pellentesque orci pellentesque et. Etiam tincidunt lacinia magna, nec lacinia dui volutpat eu.",
+                        "Nulla lobortis eleifend vestibulum. Phasellus tempor nibh eu tortor semper, in suscipit nisi euismod."
+                    ]
+                },
+                {
+                    "Description": "Cras volutpat vestibulum lectus, in varius est efficitur sed. Sed convallis, felis eget varius condimentum, leo nibh molestie sapien, in fringilla nisl orci at nisi. "
+                }
+            ]
+        },
+        {
+            "Name": "Page titi",
+            "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales sollicitudin massa. Etiam non ornare libero. Praesent venenatis scelerisque quam, quis dictum lorem ultrices in. Pellentesque ut tristique nisl. Aenean quis egestas massa. Sed suscipit augue eleifend ex imperdiet tristique. Suspendisse et orci eget quam ullamcorper sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+            "EstimatedTime": "2",
+            "AsA": "Vivamus nulla justo, venenatis fermentum elit sit amet, bibendum condimentum massa.",
+            "IWant": "Integer pellentesque feugiat mi, quis maximus mi condimentum id. Cras finibus, eros sed faucibus iaculis, est ipsum faucibus tellus, nec semper velit dui vel massa. ",
+            "DoD": [
+                {
+                    "Description": "Curabitur vitae gravida risus, ut efficitur elit...",
+                    "Bullets": [
+                        "Etiam condimentum neque et justo tristique, nec sagittis eros rutrum.",
+                        "Nunc id lacus magna. Cras suscipit ante sapien, non pellentesque orci pellentesque et. Etiam tincidunt lacinia magna, nec lacinia dui volutpat eu.",
+                        "Nulla lobortis eleifend vestibulum. Phasellus tempor nibh eu tortor semper, in suscipit nisi euismod."
+                    ]
+                },
+                {
+                    "Description": "Cras volutpat vestibulum lectus, in varius est efficitur sed. Sed convallis, felis eget varius condimentum, leo nibh molestie sapien, in fringilla nisl orci at nisi. "
+                }
+            ]
+        },
+        {
+            "Name": "Page toto",
             "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales sollicitudin massa. Etiam non ornare libero. Praesent venenatis scelerisque quam, quis dictum lorem ultrices in. Pellentesque ut tristique nisl. Aenean quis egestas massa. Sed suscipit augue eleifend ex imperdiet tristique. Suspendisse et orci eget quam ullamcorper sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
             "EstimatedTime": "2",
             "AsA": "Vivamus nulla justo, venenatis fermentum elit sit amet, bibendum condimentum massa.",
@@ -30,6 +97,20 @@
         },
         {
             "Pierre": [
+                "Etiam condimentum neque et justo tristique, nec sagittis eros rutrum",
+                "Nunc id lacus magna",
+                "Nulla lobortis eleifend vestibulum."
+            ]
+        },
+        {
+            "Paul": [
+                "Etiam condimentum neque et justo tristique, nec sagittis eros rutrum",
+                "Nunc id lacus magna",
+                "Nulla lobortis eleifend vestibulum."
+            ]
+        },
+        {
+            "Jacques": [
                 "Etiam condimentum neque et justo tristique, nec sagittis eros rutrum",
                 "Nunc id lacus magna",
                 "Nulla lobortis eleifend vestibulum."

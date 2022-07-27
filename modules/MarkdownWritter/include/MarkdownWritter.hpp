@@ -13,6 +13,7 @@ class MarkdownWritter : public IWritter{
         virtual void writeBullets(Buffer &buffer, AstPtr ast) final;
         virtual void writeAssignmentTable(Buffer &buffer, AstPtr ast) final;
         virtual void create(const Config::Object &data) final;
+        virtual void writeDeliverablesMap(Buffer &buffer, AstPtr ast) final;
         [[nodiscard]] virtual const std::string_view getName() const noexcept final;
     private :
         Config::Object _config;

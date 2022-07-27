@@ -14,6 +14,7 @@ class HTMLWritter : public IWritter
         virtual void writeDoD(Buffer &buffer, AstPtr ast) final;
         virtual void writeBullets(Buffer &buffer, AstPtr ast) final;
         virtual void writeAssignmentTable(Buffer &buffer, AstPtr ast) final;
+        virtual void writeDeliverablesMap(Buffer &buffer, AstPtr ast) final;
         virtual void create(const Config::Object &data) final;
         [[nodiscard]] virtual const std::string_view getName() const noexcept final;
     private :

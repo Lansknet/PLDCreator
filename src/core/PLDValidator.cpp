@@ -29,6 +29,8 @@ AstPtr PLDValidator::parseRoot(const Config::Object &object)
             ast->next.push_back(parseUserStories(value->as<Config::Array>()));
         else if (key == "AssignmentTable")
             ast->next.push_back(parseAssignmentTable(value->as<Config::Array>()));
+        else if (key == "DeliverablesMap")
+            ast->next.push_back(parseDeliverablesMap(value->as<Config::Array>()));
         else throw std::runtime_error("Invalid key in root: " + key);
     }
     return ast;
@@ -130,5 +132,30 @@ AstPtr PLDValidator::parseAssignmentTable(const Config::Array &array)
         }
     }
     ast->value = std::make_any<Assignements>(assignements);
+    return ast;
+}
+
+AstPtr PLDValidator::parseDeliverablesMap(const Config::Array &array)
+{
+    AstPtr ast = std::make_unique<AST>(AST::Type::DeliverablesMap);
+    using DeliverablesMap = std::unordered_map<std::string, std::unordered_map<std::string, std::vector<std::string>>>;
+    DeliverablesMap deliverables;
+    for (const auto &elem : array)
+    {
+        for (const auto &[delivrableName, value] : elem->as<Config::Object>())
+        {
+            for (const auto& delivrableElement : value->as<Config::Object>())
+            {
+                std::vector<std::string> s;
+                for (const auto &delivrableValue : delivrableElement.second->as<Config::Array>())
+                {
+                    s.push_back(delivrableValue->as<Config::String>());
+                }
+                deliverables[delivrableName][delivrableElement.first] = s;
+            }
+
+        }
+    }
+    ast->value = std::make_any<DeliverablesMap>(deliverables);
     return ast;
 }

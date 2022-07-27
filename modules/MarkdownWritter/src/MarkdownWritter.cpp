@@ -13,6 +13,8 @@ void MarkdownWritter::write(AstPtr ast)
             writeUserStories(buffer, std::move(us));
         else if (us->type == AST::Type::AssignmentTable)
             writeAssignmentTable(buffer, std::move(us));
+        else if (us->type == AST::Type::DeliverablesMap)
+            writeDeliverablesMap(buffer, std::move(us));
     }
     std::ofstream out(_config["Filename"].as<Config::String>());
     out << buffer;
@@ -128,6 +130,29 @@ void MarkdownWritter::writeAssignmentTable(Buffer &buffer, AstPtr ast)
         buffer += " |\n";
     }
     buffer += "\n\n";
+}
+
+void MarkdownWritter::writeDeliverablesMap(Buffer &buffer, AstPtr ast)
+{
+    using DeliverablesMap = std::unordered_map<std::string, std::map<std::string, std::vector<std::string>>>;
+    const DeliverablesMap &deliverables = std::any_cast<DeliverablesMap>(ast->value);
+    buffer += "## Carte des livrables\n\n";
+    
+    for (const auto &[key, value] : deliverables)
+    {
+        buffer += "### " + key + "\n\n";
+        for (const auto &[deliverableKey, deliverableValue] : value)
+        {
+            buffer += "| " + deliverableKey + " |\n";
+            buffer += "|--|\n";
+            for (const auto &content : deliverableValue)
+            {
+                
+                buffer += "| " + content + " |\n";
+            }
+            buffer += "\n\n";
+        }
+    } 
 }
 
 void MarkdownWritter::create(const Config::Object &data)

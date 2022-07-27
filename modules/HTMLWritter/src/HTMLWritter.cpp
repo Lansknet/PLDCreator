@@ -1,7 +1,9 @@
+#include <algorithm>
 #include <any>
 #include "Config.hpp"
 #include "HTMLWritter.hpp"
 #include <stdexcept>
+#include <tuple>
 #include <vector>
 #include <fstream>
 #include <sstream>
@@ -16,19 +18,18 @@ void HTMLWritter::write(AstPtr ast)
         return;
     Buffer buffer;
     buffer.reserve(0x186A0);
-    const Config::Array &section = _config["Tags"]["Section"].as<Config::Array>();
     buffer += "<style>";
     Utils::copyFileContent(buffer, _config["CssPath"].as<Config::String>());
     buffer += "</style>";
     Utils::copyFileContent(buffer, _config["HtmlPrefix"].as<Config::String>());
-    buffer += section[0]->as<Config::String>() + "User Stories" + 
-        section[1]->as<Config::String>();
     for (auto &us : ast->next)
     {
         if (us->type == AST::Type::UserStories)
             writeUserStories(buffer, std::move(us));
         else if (us->type == AST::Type::AssignmentTable)
             writeAssignmentTable(buffer, std::move(us));
+        else if (us->type == AST::Type::DeliverablesMap)
+            writeDeliverablesMap(buffer, std::move(us));
     }
     Utils::copyFileContent(buffer, _config["HtmlSufix"].as<Config::String>());
     std::ofstream out(_config["Filename"].as<Config::String>());
@@ -39,7 +40,10 @@ void HTMLWritter::writeUserStories(Buffer &buffer, AstPtr ast)
 {
     if (ast->type != AST::Type::UserStories)
         return;
+    const Config::Array &section = _config["Tags"]["Section"].as<Config::Array>();
     const Config::Object &userStoriesTags = _config["Tags"]["UserStories"].as<Config::Object>();
+    buffer += section[0]->as<Config::String>() + "User Stories" + section[1]->as<Config::String>();
+    
     for (auto &usElem : ast->next)
     {
         if (usElem->type == AST::Type::Name)
@@ -149,23 +153,63 @@ void HTMLWritter::writeAssignmentTable(Buffer &buffer, AstPtr ast)
     buffer += section[0]->as<Config::String>();
     buffer += "Tableau d'assignation";
     buffer += section[0]->as<Config::String>();
-    buffer += assignmentTable["table"][0].as<Config::String>();
+    buffer += assignmentTable["Table"][0].as<Config::String>();
     for (const auto &[name, elems] : assignements)
     {
-        buffer += assignmentTable["tr"][0].as<Config::String>();
-        buffer += assignmentTable["td"][0].as<Config::String>();
+        buffer += assignmentTable["Tr"][0].as<Config::String>();
+        buffer += assignmentTable["Td"][0].as<Config::String>();
         buffer += name;
-        buffer += assignmentTable["td"][1].as<Config::String>();
-        buffer += assignmentTable["td"][0].as<Config::String>();
+        buffer += assignmentTable["Td"][1].as<Config::String>();
+        buffer += assignmentTable["Td"][0].as<Config::String>();
         for (const auto &assignement : elems)
         {
             buffer += assignement + " ";
         }
-        buffer += assignmentTable["td"][1].as<Config::String>();
-        buffer += assignmentTable["tr"][1].as<Config::String>();
+        buffer += assignmentTable["Td"][1].as<Config::String>();
+        buffer += assignmentTable["Tr"][1].as<Config::String>();
     }
-    buffer += assignmentTable["table"][1].as<Config::String>();
+    buffer += assignmentTable["Table"][1].as<Config::String>();
 }
+
+void HTMLWritter::writeDeliverablesMap(Buffer &buffer, AstPtr ast)
+{
+    using DeliverablesMap = std::unordered_map<std::string, std::unordered_map<std::string, std::vector<std::string>>>;
+    const DeliverablesMap &deliverables = std::any_cast<DeliverablesMap>(ast->value);
+    const Config::Object &deliverablesTable = _config["Tags"]["DeliverablesMap"].as<Config::Object>();
+    const Config::Array &section = _config["Tags"]["Section"].as<Config::Array>();
+
+    buffer += section[0]->as<Config::String>();
+    buffer += "Carte des livrables";
+    buffer += section[0]->as<Config::String>();
+    for (const auto &[key, value] : deliverables)
+    {
+        buffer += deliverablesTable["TitleContainer"][0].as<Config::String>();
+        buffer += deliverablesTable["Title"][0].as<Config::String>();
+        buffer += key;
+        buffer += deliverablesTable["Title"][1].as<Config::String>();
+        buffer += deliverablesTable["TitleContainer"][1].as<Config::String>();
+        buffer += deliverablesTable["Subtitle1Container"][0].as<Config::String>();
+        for (const auto &[deliverableKey, deliverableValue] : value)
+        {
+            buffer += deliverablesTable["Subtitle"][0].as<Config::String>();
+            buffer += deliverableKey;
+            buffer += deliverablesTable["Subtitle"][1].as<Config::String>();
+        }
+        buffer += deliverablesTable["Subtitle1Container"][1].as<Config::String>();
+        Utils::Zip<std::string> z([&](const std::vector<std::string>& v){
+            buffer += deliverablesTable["Subtitle2Container"][0].as<Config::String>();
+            for (const auto &str : v)
+            {
+                buffer += deliverablesTable["Subtitle"][0].as<Config::String>();
+                buffer += str;
+                buffer += deliverablesTable["Subtitle"][1].as<Config::String>();
+
+            }
+            buffer += deliverablesTable["Subtitle2Container"][1].as<Config::String>();
+        }, value);
+    }
+}
+
 
 void HTMLWritter::create(const Config::Object &data)
 {

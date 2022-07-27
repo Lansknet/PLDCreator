@@ -17,6 +17,7 @@ class PLDValidator
         AstPtr parseDoD(const Config::Array &array);
         AstPtr parseBullets(const Config::Array &array);
         AstPtr parseAssignmentTable(const Config::Array &array);
+        AstPtr parseDeliverablesMap(const Config::Array &array);
         AstPtr _ast {};
 };
 

@@ -1,8 +1,8 @@
 {
     "PLDJsonFile": "./pld.json",
     "ModulesPath": "./modules/",
-    "OutputType": "Markdown",
-    "Filename": "pld.md",
+    "OutputType": "HTML",
+    "Filename": "pld.html",
     "CssPath": "./assets/style.css",
     "HtmlPrefix": "./assets/prefix",
     "HtmlSufix": "./assets/sufix",
@@ -11,6 +11,32 @@
             "<h1>",
             "</h1>"
         ],
+        "DeliverablesMap": {
+            "TitleContainer": [
+                "<div class=\"Grid Grid--full u-textCenter\">",
+                "</div>"
+            ],
+            "Title": [
+                "<div class=\"Grid-cell\"><div class=\"Demo content-1of1\"><p class=\"deliveryMap\">",
+                "</p></div></div>"
+            ],
+            "Subtitle1Container": [
+                "<div class=\"Grid Grid--gutters Grid--cols-2 u-textCenter\">",
+                "</div>"
+            ],
+            "Subtitle2Container": [
+                "<div class=\"Grid Grid--gutters Grid--cols-2 u-textCenter\" style=\"height:1.5em;\">",
+                "</div>"
+            ],
+            "Subtitle": [
+                "<div class=\"Grid-cell\"><div class=\"Demo content-1of2\"><p class=\"deliveryMap\">",
+                "</p></div></div>"
+            ],
+            "Content": [
+                "",
+                ""
+            ]
+        },
         "UserStories": {
             "Name": [
                 "<h2>",
@@ -58,19 +84,19 @@
             }
         },
         "AssignmentTable": {
-            "table": [
+            "Table": [
                 "<table class=\"table-fill\">",
                 "</table>"
             ],
-            "th": [
+            "Th": [
                 "<th class=\"text-left\">",
                 "</th>"
             ],
-            "tr": [
+            "Tr": [
                 "<tr class=\"text-left\">",
                 "</tr>"
             ],
-            "td": [
+            "Td": [
                 "<td>",
                 "</td>"
             ]

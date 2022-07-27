@@ -1,4 +1,4 @@
-* {
+<style>* {
   margin: 0;
   padding: 0;
   border: 0;
@@ -252,7 +252,7 @@ p.tags a {
   background: white;
   border-radius: 3px;
   border-collapse: collapse;
-  height: 320px;
+  height: 1em;
   max-width: 600px;
   padding: 5px;
   width: 100%;
@@ -262,13 +262,15 @@ p.tags a {
 
 th {
   color: #D5DDE5;
-  ;
   background: #1b1e24;
   border-bottom: 4px solid #9ea7af;
   border-right: 1px solid #343a45;
-  font-size: 23px;
+  font-size: 17px;
   font-weight: 100;
-  padding: 24px;
+  padding-top: 6px;
+  padding-right: 3px;
+  padding-bottom: 6px;
+  padding-left: 6px;
   text-align: left;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   vertical-align: middle;
@@ -314,7 +316,7 @@ tr:last-child td:last-child {
 }
 
 td {
-  padding: 20px;
+  padding: 1em;
   text-align: left;
   vertical-align: middle;
   font-weight: 300;
@@ -360,6 +362,99 @@ div.table-title {
   max-width: 600px;
   padding: 5px;
   width: 100%;
+}
+
+/* Deliverable Map */
+body {
+  color: #404040;
+  font: 100 1em/150% "proxima-nova", Helvetica, sans-serif;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/*Basic Grid Styles*/
+.Grid {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.u-textCenter {
+  text-align: center;
+}
+
+.Grid-cell {
+  flex: 1;
+}
+
+.Demo {
+  padding: 0em 1em 0;
+  border-radius: 3px;
+}
+
+.content-1of1 {
+  background-color: #000000;
+}
+
+.content-1of2 {
+  background-color: #000000;
+}
+
+.deliveryMap
+{
+  color: rgb(255, 255, 255);
+}
+
+/* With gutters*/
+.Grid--gutters {
+  margin-left: -1em;
+}
+
+.Grid--gutters .Grid-cell {
+  padding-left: 1em;
+}
+
+.Grid--gutters .Grid--nested .Grid-cell:first-of-type .Demo {
+  margin-right: 1em;
+}
+
+/* Justify per row*/
+.Grid--right {
+  justify-content: flex-end;
+}
+
+.Grid--center {
+  justify-content: center;
+}
+
+/* Alignment per row */
+.Grid--top {
+  align-items: flex-start;
+}
+
+.Grid--bottom {
+  align-items: flex-end;
+}
+
+.Grid--center {
+  align-items: center;
+}
+
+/* Alignment per cell */
+.Grid-cell--top {
+  align-self: flex-start;
+}
+
+.Grid-cell--bottom {
+  align-self: flex-end;
+}
+
+.Grid-cell--center {
+  align-self: center;
 }
 
 /* Media */
