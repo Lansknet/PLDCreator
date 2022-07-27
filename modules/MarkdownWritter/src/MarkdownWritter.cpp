@@ -1,5 +1,6 @@
 #include "MarkdownWritter.hpp"
 #include "Utils.hpp"
+#include <unordered_map>
 
 void MarkdownWritter::write(AstPtr ast)
 {
@@ -134,7 +135,7 @@ void MarkdownWritter::writeAssignmentTable(Buffer &buffer, AstPtr ast)
 
 void MarkdownWritter::writeDeliverablesMap(Buffer &buffer, AstPtr ast)
 {
-    using DeliverablesMap = std::unordered_map<std::string, std::map<std::string, std::vector<std::string>>>;
+    using DeliverablesMap = std::unordered_map<std::string, std::unordered_map<std::string, std::vector<std::string>>>;
     const DeliverablesMap &deliverables = std::any_cast<DeliverablesMap>(ast->value);
     buffer += "## Carte des livrables\n\n";
     
