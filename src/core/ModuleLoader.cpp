@@ -10,7 +10,7 @@ ModuleLoader::ModuleLoader(const Config::Object &data) : _modulesPath(data["Modu
 	_libraries.reserve(s);
     for (const auto& entry: std::filesystem::directory_iterator(_modulesPath))
 	{
-		if (entry.is_directory())
+		if (entry.is_directory() || entry.path().extension() != dylib::filename_components::suffix)
 			continue;
 		_libraries.emplace_back(entry.path().string());
 	}

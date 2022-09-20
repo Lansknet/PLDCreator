@@ -10,7 +10,7 @@
 int main(int argc, const char** argv)
 {
     using namespace Config;
-    StructuredData parser("/home/lansknet/Documents/PLDCreator/config.json");
+    StructuredData parser("config.json");
     const Config::Object &config = parser.getConfig();
     StructuredData pldFile(config["PLDJsonFile"].as<String>());
     ModuleLoader ml(config);

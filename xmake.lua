@@ -52,8 +52,11 @@ target('PLDCreator')
         add_syslinks("dl")
     end
     after_build(function (target)
+        print("Copying shaders to build directory...")
         local binaryPath = "$(buildir)/$(plat)/$(arch)/$(mode)"
         os.cp("config.json", binaryPath .. "/config.json")
         os.cp("pld.json", binaryPath .. "/pld.json")
-        os.cp("assets/*", binaryPath .. "/assets")
+        os.mkdir(binaryPath .. "/assets")
+        os.cp("assets/**",  binaryPath .. "/assets")
+        print("Copying shaders to build directory... Done !")
     end)
