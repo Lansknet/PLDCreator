@@ -14,29 +14,42 @@
 
 struct AST
 {
-    public:
-    enum Type{
-        Null = -1,
-        Root,
-        Object,
-        UserStories,
-        Name,
-        Description,
-        EstimatedTime,
-        AsA,
-        IWant,
-        DoDArray,
-        DoD,
-        Bullets,
-        AssignmentTable,
-        DeliverablesMap
-    };
-    AST(Type _type) : type(_type), value(), next() {}
-    AST(Type _type, std::any any) : type(_type), value(std::move(any)), next() {}
-    Type type = Null;
-    bool visited = false;
-    std::any value;
-    std::vector<std::unique_ptr<AST>> next;
+public:
+	enum Type
+	{
+		Null = -1,
+		Root,
+		TableOfContent,
+		TableOfContentEntry,
+		Object,
+		UserStories,
+		Name,
+		Description,
+		EstimatedTime,
+		AsA,
+		IWant,
+		DoDArray,
+		DoD,
+		Bullets,
+		AssignmentTable,
+		DeliverablesMap,
+		Assignee,
+		Status,
+		AdvancementReport
+	};
+
+	AST(Type _type) : type(_type), value(), next()
+	{
+	}
+
+	AST(Type _type, std::any any) : type(_type), value(std::move(any)), next()
+	{
+	}
+
+	Type type = Null;
+	bool visited = false;
+	std::any value;
+	std::vector<std::unique_ptr<AST>> next;
 };
 
 using AstPtr = std::unique_ptr<AST>;

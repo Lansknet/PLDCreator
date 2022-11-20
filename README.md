@@ -50,7 +50,7 @@ In the `config.json` file we have to add new elements.
 ```json
 "CssPath": "./assets/style.css",
 "HtmlPrefix": "./assets/prefix",
-"HtmlSufix": "./assets/sufix",
+"HtmlSufix": "./assets/suffix",
 "Tags": {
     "UserStories": {
         "Section": [

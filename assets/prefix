@@ -1,11 +1,10 @@
-<div class="header">
-    <div class="wrapper">
-      <h1><a href="#">LOGO</a></h1>
-      <ul>
-        <li><a href="#">Project Log Document</a></li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="wrapper container">
-    <div class="pMeta"></div>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>$PROJECT_NAME$</title>
+$STYLE$
+</head>
+<body>
+      <div class="wrapper container">
+        <div class="pMeta"></div>

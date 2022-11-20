@@ -1,120 +1,801 @@
 {
+  "Sprint III FastForward": {
     "DeliverablesMap": [
-        {
-            "Client Web": {
-                "Authentification": [
-                    "Login Page front",
-                    "UserProfile"
-                ],
-                "Technic": [
-                    "ototototot",
-                    "ototototot",
-                    "ototototot"
-                ]
-            },
-            "Backend": {
-                "Authentification": [
-                    "2.1.1 Connexion manager et employé ",
-                    "Login Page back",
-                    "2.1.2 Affectation des droits d’accès "
-                ],
-                "Technic": [
-                    "2.2.1 Mise en place de la BDD",
-                    "2.2.2 Liaison avec l’API GoPhish",
-                    "2.2.3 Tests unitaires pour les méthodes existantes "
-                ]
-            }
-        }
+      {
+        "Front": [
+          "1.1 Refonte de la page Information en Vue.js",
+          "1.2 Refonte de la page Groupe en Vue.js",
+          "1.3 Am\u00E9lioration des boutons de gestion des groupes",
+          "1.4 Cr\u00E9ation de la page Souscription en Vue.js",
+          "1.5 Formation Vue js - Page login",
+          "1.6 Cr\u00E9ation des profils utilisateurs -Front",
+          "1.7 Gestion des profils utilisateurs sur tout le site",
+          "1.8 Refonte en Vue js, de la page Dashboard",
+          "1.9 Retravail de la page de login pr\u00E9existante",
+          "1.10 Formation Vue js - Page web type",
+          "1.11 Cr\u00E9ation de la page D\u00E9tails",
+          "1.12 Cr\u00E9ation de la page de prise de rendez-vous"
+        ],
+        "IA": [
+          "2.1 Documentation du protocole de communication entre l\u0027IA et le manager",
+          "2.2 Finir le manager des IAs",
+          "2.3 Module Python de communication entre l\u0027IA et son manager",
+          "2.4 Programme d\u0027attaque v1",
+          "2.5 Page de s\u00E9lection de strat\u00E9gies pr\u00E9-d\u00E9termin\u00E9e",
+          "4.3 Cr\u00E9er le \u0022Lansknet Ubiquitous Langage\u0022"
+        ],
+        "Backend": [
+          "3.1 Cr\u00E9ation de nouvelles routes",
+          "3.2 Cr\u00E9ation des TU",
+          "3.3 Am\u00E9liorer le format des r\u00E9ponses des routes",
+          "3.4 Am\u00E9lioration des TU",
+          "3.5 Ajouter des donn\u00E9es \u00E0 la base de donn\u00E9es",
+          "3.6 R\u00E9organiser le code ",
+          "3.7 Am\u00E9lioration de l\u0027automatisation de la documentation"
+        ],
+        "CD": [
+          "4.1 Automatisation du d\u00E9ploiement",
+          "4.2 Am\u00E9liorer la s\u00E9curit\u00E9 de nos services"
+        ],
+        "CI": []
+      }
     ],
     "UserStories": [
-        {
-            "Name": "Page Login",
-            "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales sollicitudin massa. Etiam non ornare libero. Praesent venenatis scelerisque quam, quis dictum lorem ultrices in. Pellentesque ut tristique nisl. Aenean quis egestas massa. Sed suscipit augue eleifend ex imperdiet tristique. Suspendisse et orci eget quam ullamcorper sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
-            "EstimatedTime": "2",
-            "AsA": "Vivamus nulla justo, venenatis fermentum elit sit amet, bibendum condimentum massa.",
-            "IWant": "Integer pellentesque feugiat mi, quis maximus mi condimentum id. Cras finibus, eros sed faucibus iaculis, est ipsum faucibus tellus, nec semper velit dui vel massa. ",
-            "DoD": [
-                {
-                    "Description": "Curabitur vitae gravida risus, ut efficitur elit...",
-                    "Bullets": [
-                        "Etiam condimentum neque et justo tristique, nec sagittis eros rutrum.",
-                        "Nunc id lacus magna. Cras suscipit ante sapien, non pellentesque orci pellentesque et. Etiam tincidunt lacinia magna, nec lacinia dui volutpat eu.",
-                        "Nulla lobortis eleifend vestibulum. Phasellus tempor nibh eu tortor semper, in suscipit nisi euismod."
-                    ]
-                },
-                {
-                    "Description": "Cras volutpat vestibulum lectus, in varius est efficitur sed. Sed convallis, felis eget varius condimentum, leo nibh molestie sapien, in fringilla nisl orci at nisi. "
-                }
-            ]
-        },
-        {
-            "Name": "Page titi",
-            "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales sollicitudin massa. Etiam non ornare libero. Praesent venenatis scelerisque quam, quis dictum lorem ultrices in. Pellentesque ut tristique nisl. Aenean quis egestas massa. Sed suscipit augue eleifend ex imperdiet tristique. Suspendisse et orci eget quam ullamcorper sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
-            "EstimatedTime": "2",
-            "AsA": "Vivamus nulla justo, venenatis fermentum elit sit amet, bibendum condimentum massa.",
-            "IWant": "Integer pellentesque feugiat mi, quis maximus mi condimentum id. Cras finibus, eros sed faucibus iaculis, est ipsum faucibus tellus, nec semper velit dui vel massa. ",
-            "DoD": [
-                {
-                    "Description": "Curabitur vitae gravida risus, ut efficitur elit...",
-                    "Bullets": [
-                        "Etiam condimentum neque et justo tristique, nec sagittis eros rutrum.",
-                        "Nunc id lacus magna. Cras suscipit ante sapien, non pellentesque orci pellentesque et. Etiam tincidunt lacinia magna, nec lacinia dui volutpat eu.",
-                        "Nulla lobortis eleifend vestibulum. Phasellus tempor nibh eu tortor semper, in suscipit nisi euismod."
-                    ]
-                },
-                {
-                    "Description": "Cras volutpat vestibulum lectus, in varius est efficitur sed. Sed convallis, felis eget varius condimentum, leo nibh molestie sapien, in fringilla nisl orci at nisi. "
-                }
-            ]
-        },
-        {
-            "Name": "Page toto",
-            "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales sollicitudin massa. Etiam non ornare libero. Praesent venenatis scelerisque quam, quis dictum lorem ultrices in. Pellentesque ut tristique nisl. Aenean quis egestas massa. Sed suscipit augue eleifend ex imperdiet tristique. Suspendisse et orci eget quam ullamcorper sagittis. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
-            "EstimatedTime": "2",
-            "AsA": "Vivamus nulla justo, venenatis fermentum elit sit amet, bibendum condimentum massa.",
-            "IWant": "Integer pellentesque feugiat mi, quis maximus mi condimentum id. Cras finibus, eros sed faucibus iaculis, est ipsum faucibus tellus, nec semper velit dui vel massa. ",
-            "DoD": [
-                {
-                    "Description": "Curabitur vitae gravida risus, ut efficitur elit...",
-                    "Bullets": [
-                        "Etiam condimentum neque et justo tristique, nec sagittis eros rutrum.",
-                        "Nunc id lacus magna. Cras suscipit ante sapien, non pellentesque orci pellentesque et. Etiam tincidunt lacinia magna, nec lacinia dui volutpat eu.",
-                        "Nulla lobortis eleifend vestibulum. Phasellus tempor nibh eu tortor semper, in suscipit nisi euismod."
-                    ]
-                },
-                {
-                    "Description": "Cras volutpat vestibulum lectus, in varius est efficitur sed. Sed convallis, felis eget varius condimentum, leo nibh molestie sapien, in fringilla nisl orci at nisi. "
-                }
-            ]
-        }
+      {
+        "Title": "1.1 Refonte de la page Information en Vue.js",
+        "Description": "Pour que la page d\u0027informations soit accessible dans la nouvelle architecture Front en Vue.js.",
+        "Assignee": "Vincent Darnige",
+        "Status": "Open",
+        "EstimatedTime": 2,
+        "AsA": "Utilisateur de Lansknet",
+        "IWant": "Pouvoir comprendre l\u0027int\u00E9r\u00EAt des pages \u00E0 ma disposition",
+        "DoD": [
+          {
+            "Description": "Prise en main de l\u0027outil Figma via un tutoriel",
+            "Bullets": []
+          },
+          {
+            "Description": "Production d\u0027une maquette interactive de la page via Figma",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation de composants type \u0022carte\u0022 permettant aux utilisateurs de comprendre les autres pages de l\u0027application",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "1.2 Refonte de la page Groupe en Vue.js",
+        "Description": "Pour que la page de formation et de gestion de groupe soit adapt\u00E9e \u00E0 la nouvelle architecture Front en Vue.js.",
+        "Assignee": "Vincent Darnige",
+        "Status": "Open",
+        "EstimatedTime": 4,
+        "AsA": "Manager utilisant Lansknet",
+        "IWant": "Visualiser clairement les groupes de campagnes d\u0027envoi en cours",
+        "DoD": [
+          {
+            "Description": "Cr\u00E9ation de composant visuel englobant  un \u0022Groupe\u0022 d\u0027utilisateurs",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation de fonctions permettant le chargement visuel dynamique de tout les groupes actifs via des composants \u0022Groupes\u0022",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation de sous-composant \u0022Utilisateurs\u0022 permettant l\u0027affichage d\u0027utilisateurs membres des groupes",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation d\u0027un composant bouton \u0022Ajouter membre\u0022 appelant un route pouvant modifier dynamiquement les membres d\u0027un groupe",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation d\u0027un sous-composant bouton \u0022Supprimer membre\u0022, au sein des composants \u0022Utilisateurs\u0022 appelant un route pouvant modifier dynamiquement les membres d\u0027un groupe",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation d\u0027une condition permettant la visualisation de la page uniquement par les statut \u0022Manager\u0022 et non tout les utilisateurs.",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "1.3 Am\u00E9lioration des boutons de gestion des groupes",
+        "Description": "Pour que les modifications entre les groupes soient fluides et claires dans la nouvelle architecture Front en Vue.js.",
+        "Assignee": "Vincent Darnige",
+        "Status": "Open",
+        "EstimatedTime": 3,
+        "AsA": "Manager utilisant Lansknet",
+        "IWant": "G\u00E9rer clairement les diff\u00E9rents groupes qui recevront les campagnes de mails",
+        "DoD": [
+          {
+            "Description": "Cr\u00E9ation d\u0027un composant bouton \u0022Cr\u00E9ation de groupe\u0022 au sein de la page web \u0022Groupe\u0022",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ations de fonction d\u0027appel permettant la cr\u00E9ation dynamique de composants visuels \u0022Groupes\u0022",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ations d\u0027une fonction d\u0027appel de la route permettant la cr\u00E9ation dynamique de groupe dans le back de l\u0027application",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation d\u0027un \u00E9cran permettant de renseigner les \u0022Utilisateurs\u0022 membre du nouveau groupe cr\u00E9\u00E9",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation d\u0027un appel permettant de renseigner les \u0022Utilisateurs\u0022 membre du nouveau groupe cr\u00E9\u00E9 au back de l\u0027application",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "1.4 Cr\u00E9ation de la page Souscription en Vue.js",
+        "Description": "Pour que la page d\u0027abonnement soit adapt\u00E9e \u00E0 la nouvelle architecture Front en Vue.js.",
+        "Assignee": "Vincent Darnige",
+        "Status": "Open",
+        "EstimatedTime": 3,
+        "AsA": "Manager utilisant Lansknet",
+        "IWant": "Pouvoir renouveler/changer mon abonnement au service Lansknet depuis l\u0027application",
+        "DoD": [
+          {
+            "Description": "Cr\u00E9ation de composants visuel d\u0027abonnement \u00221 mois\u0022, \u00221 an\u0022,\u00223 mois\u0022, \u00226 mois\u0022 permettant l\u0027ajout de temp d\u0027utilisation de la solution  via un appel de routes transmettant l\u0027information au back de l\u0027application",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation d\u0027une fonction appelant la route ajoutant la formule de temps d\u0027abonnement d\u00E9di\u00E9e au temps d\u0027abonnement total de l\u0027utilisateur",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation de composants permettant la visualisation du \u0022Nombre de campagnes effectu\u00E9es\u0022, \u0022De la date de premier abonnement\u0022, et \u0022 de la date de fin d\u0027abonnement\u0022",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation de fonction d\u0027appel de routes r\u00E9cup\u00E9rant les informations li\u00E9es au \u0022Nombre de campagnes effectu\u00E9es\u0022, \u0022De la date de premier abonnement\u0022, et \u0022 de la date de fin d\u0027abonnement\u0022",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation d\u0027une condition permettant la visualisation de la page uniquement par les statut \u0022Manager\u0022 et non tout les utilisateurs.",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "1.5 Formation Vue js - Page login",
+        "Description": "Formation au framework vue js, via un tutoriel d\u00E9crivant la production d\u0027une page de log-in.",
+        "Assignee": "Ewen Le-Letty",
+        "Status": "Open",
+        "EstimatedTime": 2,
+        "AsA": "D\u00E9veloppeur lanksnet",
+        "IWant": "Me former au vue js afin poss\u00E9der les bases du d\u00E9veloppement front",
+        "DoD": [
+          {
+            "Description": "R\u00E9alisation du tutoriel",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation du visuel de la page de login \u00E0 l\u0027aide d\u0027un template",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "1.6 Cr\u00E9ation des profils utilisateurs -Front",
+        "Description": "Pouvoir r\u00E9cup\u00E9rer les bonnes informations utilisateur, lors de l\u0027enregistrement et de la connexion sur le site.",
+        "Assignee": "Ewen Le-Letty",
+        "Status": "Open",
+        "EstimatedTime": 2,
+        "AsA": "Utilisateur Lanksnet",
+        "IWant": "Pouvoir r\u00E9cup\u00E9rer les bonnes donn\u00E9es lors de la connexion au site Lanksnet",
+        "DoD": [
+          {
+            "Description": "Sch\u00E9matisation de la structure \u00E0 des fins de production de code optimis\u00E9e",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation d\u0027une structure de stockage de donn\u00E9e sur le code Front",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation de fonctions de r\u00E9cup\u00E9rations des donn\u00E9es utiles \u00E0 la g\u00E9n\u00E9ration de la structure",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation des fonctions de transferts de la structure Front vers le Back de l\u0027application",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "1.7 Gestion des profils utilisateurs sur tout le site",
+        "Description": "Afficher les bonnes informations en fonction du r\u00F4le de l\u0027utilisateur.",
+        "Assignee": "Ewen Le-Letty",
+        "Status": "Open",
+        "EstimatedTime": 2,
+        "AsA": "Utilisateur Lanksnet",
+        "IWant": "Avoir acc\u00E8s au contenue qui m\u0027est associ\u00E9",
+        "DoD": [
+          {
+            "Description": "Cr\u00E9ation de sous-composant affichant le nom de l\u0027utilisateur",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation de sous-composant affichant le pr\u00E9nom de l\u0027utilisateur",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation de sous-composant affichant le email de l\u0027utilisateur",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation d\u0027un meta-composant affichant le nom, le pr\u00E9nom, et l\u0027adresse mail de l\u0027utilisateur connect\u00E9",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation de moyens de conservation du composant d\u0027une page \u00E0 l\u0027autre",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "1.8 Refonte en Vue js, de la page Dashboard",
+        "Description": "Pour que le code de la page Dashboard soit accessible et adapt\u00E9 \u00E0 la nouvelle architecture Front en Vue.js.",
+        "Assignee": "Ewen Le-Letty",
+        "Status": "Open",
+        "EstimatedTime": 4,
+        "AsA": "Utilisateur de lanksnet",
+        "IWant": "Avoir acc\u00E8s aux donn\u00E9es de la campagne de fishing actuel organiser par secteur d\u0027activit\u00E9",
+        "DoD": [
+          {
+            "Description": "Afficher de mani\u00E8re dynamique le nombre de mails ouverts par un secteur d\u0027activit\u00E9",
+            "Bullets": []
+          },
+          {
+            "Description": "Afficher de mani\u00E8re dynamique le nombre de liens clickers par un secteur d\u0027activit\u00E9",
+            "Bullets": []
+          },
+          {
+            "Description": "Afficher de mani\u00E8re dynamique le nombre de donn\u00E9es envoy\u00E9es par un secteur d\u0027activit\u00E9",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "1.9 Retravail de la page de login pr\u00E9existante",
+        "Description": "Pour que la page de login soit accessible et fonctionnelle dans la nouvelle architecture Front en Vue.js.",
+        "Assignee": "Ewen Le-Letty",
+        "Status": "Open",
+        "EstimatedTime": 2,
+        "AsA": "Utilisateur de lanksnet",
+        "IWant": "Pouvoir me connecter avec mon compte sur le site lanksnet",
+        "DoD": [
+          {
+            "Description": "Assurer la liaison entre le bouton \u0022forgotten password\u0022 et son action dans le Back de l\u0027application",
+            "Bullets": []
+          },
+          {
+            "Description": "Assurer la liaison entre le bouton \u0022sign-up\u0022 et son action dans le Back de l\u0027application",
+            "Bullets": []
+          },
+          {
+            "Description": "Assurer la liaison entre le bouton \u0022sign-in\u0022 et la route correspondante dans le Back de l\u0027application",
+            "Bullets": []
+          },
+          {
+            "Description": "Modifier visuellement les composants de la page Login",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "1.10 Formation Vue js - Page web type",
+        "Description": "Formation \u00E0 la cr\u00E9ation d\u0027une page web en vue js, notamment la manipulation des composant, le travail sur trois langages en parall\u00E8les.",
+        "Assignee": "Vincent Guionnet",
+        "Status": "Open",
+        "EstimatedTime": 2,
+        "AsA": "D\u00E9veloppeur Lansknet",
+        "IWant": "Me former au vue js afin poss\u00E9der les bases du d\u00E9veloppement Front",
+        "DoD": [
+          {
+            "Description": "Compr\u00E9hension de l\u0027agencement visuel des composants dans un cadre de page en html",
+            "Bullets": []
+          },
+          {
+            "Description": "Maitrise de la manipulation des valeur CSS des composant avec ses cons\u00E9quence visibles",
+            "Bullets": []
+          },
+          {
+            "Description": "Mise en place de m\u00E9thodes et de donn\u00E9es manipulables au sein de scripts javascript li\u00E9s au composants",
+            "Bullets": []
+          },
+          {
+            "Description": "Formation de cr\u00E9ation de page via un tutoriel",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "1.11 Cr\u00E9ation de la page D\u00E9tails",
+        "Description": "La page d\u00E9tails doit contenir la liste des informations destin\u00E9es aux clients et affich\u00E9e de mani\u00E8re coh\u00E9rente et visuellement agr\u00E9able.",
+        "Assignee": "Vincent Guionnet",
+        "Status": "Open",
+        "EstimatedTime": 5,
+        "AsA": "Responsable/Client Lansknet",
+        "IWant": "Avoir acc\u00E8s aux r\u00E9sultats de la campagne",
+        "DoD": [
+          {
+            "Description": "Agencer la page d\u00E9tail en fonction des composants n\u00E9cessaires",
+            "Bullets": []
+          },
+          {
+            "Description": "Gestion des appels aux routes pour r\u00E9cup\u00E9rer les informations des campagnes en cours",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation des composants cartes \u0022Mails ouverts\u0022, \u0022Liens cliqu\u00E9s\u0022, \u0022Donn\u00E9es partag\u00E9es\u0022",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation du meta-composant \u0022Campagne\u0022",
+            "Bullets": []
+          },
+          {
+            "Description": "Affichage dynamique des informations \u0022Mails ouverts\u0022, \u0022Liens cliqu\u00E9s\u0022, \u0022Donn\u00E9es partag\u00E9es\u0022",
+            "Bullets": []
+          },
+          {
+            "Description": "Affichage dynamique des informations \u0022Campagnes\u0022",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "1.12 Cr\u00E9ation de la page de prise de rendez-vous",
+        "Description": "Dans le cadre de notre accompagnement client chez Lanksnet, il faut pouvoir proposer un rendez-vous \u00E0 nos clients si nous remarquons un probl\u00E8me, ou si nous souhaitons faire un point. Le client doit \u00E9galement pouvoir prendre rendez-vous avec nous si en ressent le besoin.",
+        "Assignee": "Vincent Guionnet",
+        "Status": "Open",
+        "EstimatedTime": 5,
+        "AsA": "Responsable/Client Lansknet",
+        "IWant": "Pouvoir convenir d\u2019un rendez-vous client",
+        "DoD": [
+          {
+            "Description": "Un page web de rendez-vous accessible depuis le menu d\u00E9roulant sur le c\u00F4t\u00E9 de l\u0027application",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation de fonction permettant l\u0027affichage d\u0027une liste de propositions de rendez-vous \u00E0 accepter o\u00F9 reporter",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation de meta-composant visuel permettant l\u0027affichage d\u0027une liste de propositions de rendez-vous \u00E0 accepter o\u00F9 reporter",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation de composant visuel permettant l\u0027affichage d\u0027une date de rendez-vous sur un sch\u00E9ma d\u0027agenda",
+            "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation de fonction permettant l\u0027affichage de suggestions d\u2019horaires en accords avec les rendez-vous d\u2019un responsable client",
+            "Bullets": []
+          },
+          {
+            "Description": "Gestion des routes d\u0027acceptation et de refus des rendez-vous avec l\u0027\u00E9quipe Lansknet",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "2.1 Documentation du protocole de communication entre l\u0027IA et le manager",
+        "Description": "Obtenir une documentation sur la communication entre l\u0027IA et le manager, pour pouvoir suivre l\u0027\u00E9volution du protocole et simplifi\u00E9 son impl\u00E9mentation c\u00F4t\u00E9 IA, si elle n\u0027utilise pas comme langage Python (qui est d\u00E9velopp\u00E9 en parall\u00E8le).",
+        "Assignee": "Hugo Prevost",
+        "Status": "Open",
+        "EstimatedTime": 2,
+        "AsA": "D\u00E9velopeur",
+        "IWant": "Avoir une documentation sur le protocole pour pouvoir le modifier ou l\u0027impl\u00E9ment\u00E9 dans diff\u00E9rents langage.",
+        "DoD": [
+          {
+            "Description": "Avoir une documentation sur le protocole de communication",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "2.2 Finir le manager des IAs",
+        "Description": "Permettre \u00E0 l\u0027IA de communiqu\u00E9 avec les diff\u00E9rentes routes de l\u0027API gophise de mani\u00E8re agiles et faire diff\u00E9rent traitement de donn\u00E9, si n\u00E9cessaire.",
+        "Assignee": "Hugo Prevost",
+        "Status": "Open",
+        "EstimatedTime": 7,
+        "AsA": "AI",
+        "IWant": "Avoir acc\u00E8s aux r\u00E9sum\u00E9s des campagnes en cours pour adapter au mieux mon comportement",
+        "DoD": [
+          {
+            "Description": "Avoir une communication avec les diff\u00E9rentes routes GoPhish",
+            "Bullets": []
+          },
+          {
+            "Description": "Pouvoir recevoir des requ\u00EAtes de client web",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "2.3 Module Python de communication entre l\u0027IA et son manager",
+        "Description": "Cr\u00E9e un module python pour simplifi\u00E9 le d\u00E9veloppement des IAs qui doivent communiquer avec leur manager.",
+        "Assignee": "Hugo Prevost",
+        "Status": "Open",
+        "EstimatedTime": 3,
+        "AsA": "D\u00E9vellopeur",
+        "IWant": "pourvoir d\u00E9velopp\u00E9 la communication entre l\u0027IA et son manager plus simplement.",
+        "DoD": [
+          {
+            "Description": "Pouvoir envoyer des requ\u00EAtes de donn\u00E9es simplement",
+            "Bullets": []
+          },
+          {
+            "Description": "Recevoir les r\u00E9sultats des diff\u00E9rentes requ\u00EAtes de donn\u00E9e plus simplement",
+            "Bullets": []
+          },
+          {
+            "Description": "Pouvoir envoyer les r\u00E9sultats simplement vers le manager",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "2.4 Programme d\u0027attaque v1",
+        "Description": "Afin d\u0027obtenir un produit final utilisable, il faut que nous ayons une intelligence artificielle basique qui puisse interagir avec GoPhish via le manager de l\u0027IA, et ordonner une s\u00E9rie d\u0027attaque.",
+        "Assignee": "Julien Mertian de muller",
+        "Status": "Open",
+        "EstimatedTime": 4,
+        "AsA": "Client Lansknet",
+        "IWant": "Tester mes \u00E9quipes",
+        "DoD": [
+          {
+            "Description": "Entrain\u00E9 une premi\u00E8re IA de test via un proc\u00E9d\u00E9 de Machine Learning.",
+            "Bullets": []
+          },
+          {
+            "Description": "Tester cette intelligence, et v\u00E9rifier un comportement coh\u00E9rent.",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "2.5 Page de s\u00E9lection de strat\u00E9gies pr\u00E9-d\u00E9termin\u00E9e",
+        "Description": "Le client doit pouvoir aborder le produit Lansknet en douceur en ayant la possibilit\u00E9 de choisir des strat\u00E9gies d\u0027attaques pr\u00E9con\u00E7us afin d\u0027essayer l\u0027outil.",
+        "Assignee": "Julien Mertian de muller",
+        "Status": "Open",
+        "EstimatedTime": 4,
+        "AsA": "Manager",
+        "IWant": "D\u00E9couvrir Lansknet",
+        "DoD": [
+          {
+            "Description": "Une nouvelle page dans l\u0027application web permettant de s\u00E9lectionner une strat\u00E9gie",
+            "Bullets": []
+          },
+          {
+            "Description": "Avoir au moins deux algorithme de prise de d\u00E9cision \u00E0 coder, capable de communiquer via le \u0022manager de l\u0027IA\u0022.",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "3.1 Cr\u00E9ation de nouvelles routes",
+        "Description": "Nous devons cr\u00E9er de nouvelles routes afin de r\u00E9pondre aux besoins du front.",
+        "Assignee": "Arthur Vasseur",
+        "Status": "Open",
+        "EstimatedTime": 6,
+        "AsA": "D\u00E9veloppeur Lansknet",
+        "IWant": "Je veux \u00E9tendre les informations que l\u0027API renvoie",
+        "DoD": [
+          {
+            "Description": "/api/employees/edit/{id} Editer un employ\u00E9 - Kallista",
+            "Bullets": []
+          },
+          {
+            "Description": "/api/employees/create Cr\u00E9er un nouvel employ\u00E9 - Kallista",
+            "Bullets": []
+          },
+          {
+            "Description": "/password_reset Changer le mot de passe - Kallista",
+            "Bullets": []
+          },
+          {
+            "Description": "/api/company R\u00E9cup\u00E9rer les informations d\u0027une entreprise - Arthur",
+            "Bullets": []
+          },
+          {
+            "Description": "/api/subscription R\u00E9cup\u00E9rer les informations d\u0027un abonement - Arthur",
+            "Bullets": []
+          },
+          {
+            "Description": "/api/subscription/edit Mettre \u00E0 jour un abonement - Arthur",
+            "Bullets": []
+          },
+          {
+            "Description": "/api/subscription/create Cr\u00E9er un objet abonnement - Kallista",
+            "Bullets": []
+          },
+          {
+            "Description": "/api/subscription/cancel Annuler un abonnement - Arthur",
+            "Bullets": []
+          },
+          {
+            "Description": "/api/register Ajouter de nouvelles donn\u00E9es lors de l\u0027inscription (nom, pr\u00E9nom, entreprise, service...) - Kallista",
+            "Bullets": []
+          },
+          {
+            "Description": "/api/campaign/company/{id} Ajouter le total des campagnes - Arthur",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "3.2 Cr\u00E9ation des TU",
+        "Description": "Cr\u00E9ation de test unitaires pour notre API pour v\u00E9rifier que toutes nos routes aient le comportement voulu dans chaque situation.",
+        "Assignee": "Arthur Vasseur",
+        "Status": "Open",
+        "EstimatedTime": 2,
+        "AsA": "D\u00E9veloppeur Back",
+        "IWant": "V\u00E9rifier rapidement que mes nouvelles routes ou routes modifi\u00E9es aient le comportement attendu",
+        "DoD": [
+          {
+            "Description": "/api/employees/edit/\u003Cid\u003E Editer un employ\u00E9 - Kallista",
+            "Bullets": []
+          },
+          {
+            "Description": "/api/employees/create Cr\u00E9er un nouvel employ\u00E9 - Kallista",
+            "Bullets": []
+          },
+          {
+            "Description": "/password_reset Changer le mot de passe - Kallista",
+            "Bullets": []
+          },
+          {
+            "Description": "/api/company R\u00E9cup\u00E9rer les informations d\u0027une entreprise - Arthur",
+            "Bullets": []
+          },
+          {
+            "Description": "/api/subscription R\u00E9cup\u00E9rer les informations d\u0027un abonement - Arthur",
+            "Bullets": []
+          },
+          {
+            "Description": "/api/souscription/edit Mettre \u00E0 jour un abonement - Arthur",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "3.3 Am\u00E9liorer le format des r\u00E9ponses des routes",
+        "Description": "L\u0027objectif est d\u0027am\u00E9liorer la r\u00E9ponse des routes de l\u0027API afin d\u0027am\u00E9liorer la compr\u00E9hension.",
+        "Assignee": "Kallista Rhoc",
+        "Status": "Open",
+        "EstimatedTime": 2,
+        "AsA": "D\u00E9veloppeur Lansknet",
+        "IWant": "Am\u00E9liorer le format des r\u00E9ponse de l\u0027api afin qu\u0027elles soit plus compr\u00E9hensives",
+        "DoD": [
+          {
+            "Description": "Trouver et documenter un format pour les r\u00E9ponses",
+            "Bullets": []
+          },
+          {
+            "Description": "Appliquer le format trouv\u00E9 sur toutes les routes",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "3.4 Am\u00E9lioration des TU",
+        "Description": "L\u0027objectif est d\u0027am\u00E9liorer nos tests unitaires afin de les rendre plus utiles et pratiques.",
+        "Assignee": "Kallista Rhoc",
+        "Status": "Open",
+        "EstimatedTime": 2,
+        "AsA": "D\u00E9veloppeur Lanknet",
+        "IWant": "Am\u00E9liorer les tests unitaires",
+        "DoD": [
+          {
+            "Description": "Afficher le coverage des tests unitaires",
+            "Bullets": []
+          },
+          {
+            "Description": "Am\u00E9liorer la lisibilt\u00E9 des tests dans le terminal",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "3.5 Ajouter des donn\u00E9es \u00E0 la base de donn\u00E9es",
+        "Description": "L\u0027objectif est d\u0027ajouter de nouvelles donn\u00E9es \u00E0 notre BDD afin de rendre nos donn\u00E9es plus compl\u00E8tes.",
+        "Assignee": "Arthur Vasseur",
+        "Status": "Open",
+        "EstimatedTime": 4,
+        "AsA": "D\u00E9veloppeur Lansknet",
+        "IWant": "Agrandir notre base de donn\u00E9es afin qu\u0027elle r\u00E9ponde \u00E0 nos besoins",
+        "DoD": [
+          {
+            "Description": "Ajouter une gestion des employ\u00E9s non actifs - Arthur",
+            "Bullets": []
+          },
+          {
+            "Description": "Concevoir un mod\u00E8le pour la gestion de la souscription - Arthur \u0026 Kallista",
+            "Bullets": []
+          },
+          {
+            "Description": "Impl\u00E9menter le mod\u00E8le de gestion de la souscription en SQL - Kallista",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "3.6 R\u00E9organiser le code ",
+        "Description": "L\u0027objectif est de restructurer le code du backend afin que le code actuel soit plus lisible, et que l\u0027expansion futur du backend se fasse de mani\u00E8re organis\u00E9e.",
+        "Assignee": "Arthur Vasseur",
+        "Status": "Open",
+        "EstimatedTime": 4,
+        "AsA": "D\u00E9veloppeur Lansknet",
+        "IWant": "Am\u00E9liorer la structure du backend",
+        "DoD": [
+          {
+            "Description": "S\u00E9paration des mod\u00E8les et des routes (BE, IA) - Arthur \u0026 Kallista",
+            "Bullets": []
+          },
+          {
+            "Description": "S\u00E9paration de l\u0027initialisation de BDD - Kallista",
+            "Bullets": []
+          },
+          {
+            "Description": "S\u00E9paration de l\u0027initialisation de l\u0027app - Arthur",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "3.7 Am\u00E9lioration de l\u0027automatisation de la documentation",
+        "Description": "L\u0027objectif est d\u0027avoir une meilleur automatisation de la documentation afin de moins avoir \u00E0 intervenir manuellement.",
+        "Assignee": "Arthur Vasseur",
+        "Status": "Open",
+        "EstimatedTime": 1,
+        "AsA": "D\u00E9veloppeur Lansknet",
+        "IWant": "Am\u00E9liorer la documentation",
+        "DoD": [
+          {
+            "Description": "Automatiser la date de publication",
+            "Bullets": []
+          },
+          {
+            "Description": "Automatiser l\u0027affichage du format des r\u00E9ponses depuis notre API",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "4.1 Automatisation du d\u00E9ploiement",
+        "Description": "Le d\u00E9ploiement sur le serveur Azure est manuel, si une personne de l\u0027\u00E9quipe \u00E0 besoin de d\u00E9ployer une nouvelle mise \u00E0 jour sur le serveur Azure elle doit faire appel \u00E0 Arthur Vasseur. L\u0027objectif est d\u0027automatiser cela avec Github.",
+        "Assignee": "Arthur Vasseur",
+        "Status": "Open",
+        "EstimatedTime": 2,
+        "AsA": "D\u00E9veloppeur de l\u2019\u00E9quipe Lansknet",
+        "IWant": "Am\u00E9liorer le d\u00E9ploiement continu de notre infrastructure, en l\u0027automatisant",
+        "DoD": [
+          {
+            "Description": "Mettre en place automatiquement le d\u00E9ploiement lors de la cr\u00E9ation d\u0027une release sur le repo du front",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "4.2 Am\u00E9liorer la s\u00E9curit\u00E9 de nos services",
+        "Description": "L\u0027objectif est d\u0027am\u00E9liorer la s\u00E9curit\u00E9 des informations transmises entre le client et le serveur (vise versa).",
+        "Assignee": "Arthur Vasseur",
+        "Status": "Open",
+        "EstimatedTime": 1,
+        "AsA": "Utilisateur Lansknet",
+        "IWant": "Avoir acc\u00E8s aux diff\u00E9rents site de mani\u00E8re s\u00E9curis\u00E9",
+        "DoD": [
+          {
+            "Description": "Impl\u00E9menter le protocole HTTPS",
+            "Bullets": []
+          }
+        ]
+      },
+      {
+        "Title": "4.3 Cr\u00E9er le \u0022Lansknet Ubiquitous Langage\u0022",
+        "Description": "Il est pr\u00E9f\u00E9rable d\u0027assurer la coh\u00E9rence des d\u00E9veloppement et des d\u00E9cisions de Lansknet au plus t\u00F4t dans le cycle de vie du projet. A cette fin, nous devons cr\u00E9er un langage non-ambigus tel que recommand\u00E9 par le Domain Driven Development.",
+        "Assignee": "Julien Mertian de muller",
+        "Status": "Open",
+        "EstimatedTime": 2,
+        "AsA": "Membre de l\u0027\u00E9quipe Lansknet",
+        "IWant": "Elimin\u00E9 toute ambigu\u00EFt\u00E9 sur le sens des termes utilis\u00E9s dans les dicussions internes.",
+        "DoD": [
+          {
+            "Description": "Un tableau contenant tout les mot-clefs en usage chez Lansknet ainsi qu\u0027une description de leurs significations d\u00E9taill\u00E9.",
+            "Bullets": []
+          },
+          {
+            "Description": "Communiquer ce tableau \u00E0 l\u0027ensemble de l\u0027\u00E9quipe de d\u00E9veloppeur Lansknet.",
+            "Bullets": []
+          }
+        ]
+      }
     ],
-    "AssignmentTable": [
-        {
-            "Jean": [
-                "Etiam condimentum neque et justo tristique, nec sagittis eros rutrum",
-                "Nunc id lacus magna"
-            ]
-        },
-        {
-            "Pierre": [
-                "Etiam condimentum neque et justo tristique, nec sagittis eros rutrum",
-                "Nunc id lacus magna",
-                "Nulla lobortis eleifend vestibulum."
-            ]
-        },
-        {
-            "Paul": [
-                "Etiam condimentum neque et justo tristique, nec sagittis eros rutrum",
-                "Nunc id lacus magna",
-                "Nulla lobortis eleifend vestibulum."
-            ]
-        },
-        {
-            "Jacques": [
-                "Etiam condimentum neque et justo tristique, nec sagittis eros rutrum",
-                "Nunc id lacus magna",
-                "Nulla lobortis eleifend vestibulum."
-            ]
-        }
-    ]
+    "AssignmentTable": {
+      "Arthur Vasseur 12 J/H": [
+        "3.1 Cr\u00E9ation de nouvelles routes",
+        "3.2 Cr\u00E9ation des TU",
+        "3.5 Ajouter des donn\u00E9es \u00E0 la base de donn\u00E9es",
+        "3.6 R\u00E9organiser le code ",
+        "3.7 Am\u00E9lioration de l\u0027automatisation de la documentation",
+        "4.1 Automatisation du d\u00E9ploiement",
+        "4.2 Am\u00E9liorer la s\u00E9curit\u00E9 de nos services"
+      ],
+      "Julien Mertian de muller 10 J/H": [
+        "2.4 Programme d\u0027attaque v1",
+        "2.5 Page de s\u00E9lection de strat\u00E9gies pr\u00E9-d\u00E9termin\u00E9e",
+        "4.3 Cr\u00E9er le \u0022Lansknet Ubiquitous Langage\u0022"
+      ],
+      "Kallista Rhoc 12 J/H": [
+        "3.1 Cr\u00E9ation de nouvelles routes",
+        "3.2 Cr\u00E9ation des TU",
+        "3.3 Am\u00E9liorer le format des r\u00E9ponses des routes",
+        "3.4 Am\u00E9lioration des TU",
+        "3.5 Ajouter des donn\u00E9es \u00E0 la base de donn\u00E9es",
+        "3.6 R\u00E9organiser le code"
+      ],
+      "Vincent Darnige 12 J/H": [
+        "1.1 Refonte de la page Information en Vue.js",
+        "1.2 Refonte de la page Groupe en Vue.js",
+        "1.3 Am\u00E9lioration des boutons de gestion des groupes",
+        "1.4 Cr\u00E9ation de la page Souscription en Vue.js"
+      ],
+      "Vincent Guionnet 12 J/H": [
+        "1.10 Formation Vue js - Page web type",
+        "1.11 Cr\u00E9ation de la page D\u00E9tails",
+        "1.12 Cr\u00E9ation de la page de prise de rendez-vous"
+      ],
+      "Ewen Le-Letty 12 J/H": [
+        "1.5 Formation Vue js - Page login",
+        "1.6 Cr\u00E9ation des profils utilisateurs -Front",
+        "1.7 Gestion des profils utilisateurs sur tout le site",
+        "1.8 Refonte en Vue js, de la page Dashboard",
+        "1.9 Retravail de la page de login pr\u00E9existante"
+      ],
+      "Hugo Prevost 12 J/H": [
+        "2.1 Documentation du protocole de communication entre l\u0027IA et le manager",
+        "2.2 Finir le manager des IAs",
+        "2.3 Module Python de communication entre l\u0027IA et son manager"
+      ]
+    },
+    "AdvancementReport": {
+      "Hugo Prevost": [
+        "2.1 Documentation du protocole de communication entre l'IA et le manager - DOD: Créer un protocole de communication simple - Done - 1/2 JH, Documenter la communication côté IA - En cours - 1/2 JH, Documenter la communication côté Manager - En cours - 1/3 JH",
+        "2.2 Finir le manager des IAs - DOD: Pouvoir lancer et communiquer avec les IA - En cours - 1 JH, Pouvoir recevoir des requêtes de client web - 1/2 JH"
+      ],
+      "Kallista Rhoc": [
+        "3.6 Réorganiser le code - DOD Séparation des modèles et des routes (BE, IA), Séparation de l'initialisation de BDD 2/2 JH",
+        "Amélioration du PLDMaker"
+      ],
+      "Arthur Vasseur": [
+        "3.6 Réorganiser le code : Séparation des modèles et des routes (BE, IA), Séparation de l'initialisation de l'app 2/2 JH",
+        "Amélioration du PLDMaker"
+      ],
+      "Ewen Le-Letty": [
+        "1.5 Formation Vue js - Page login - DOD: Créer une page de login  1/2 JH"
+      ],
+      "Vincent Guionnet": [
+        "1.10 Formation Vue js - Page web type DOD: Compréhension de l'agencement visuel des composants dans un cadre de page en html 0.5/2 JH",
+        "1.11 Création de la page Détails DOD: Agencer la page détail en fonction des composants nécessaires - En cours 0.5/6 JH"
+      ],
+      "Vincent Darnige": [
+        "1.1 Refonte de la page Information en Vue.js - DOD: Création de composants type \"carte\" permettant aux utilisateurs de comprendre les autres pages de l'application - Fini - 0,5/2 JH",
+        "1.2 Refonte de la page Groupe en Vue.js - DOD: Création de composant visuel englobant  un \"Groupe\" d'utilisateurs - Fini - 0,5/4 JH",
+        "1.3 Amélioration des boutons de gestion des groupes - DOD: Création d'un composant bouton \"Création de groupe\" au sein de la page web \"Groupe\"- Fini - 0,5/3 JH",
+        "1.4 Création de la page Souscription en Vue.js - DOD: Création de composants visuel d'abonnement \"1 mois\", \"1 an\",\"3 mois\", \"6 mois\" permettant l'ajout de temp d'utilisation de la solution  via un appel de routes transmettant l'information au back de l'application -En cours - 1/3  JH"
+      ],
+      "Julien Mertian de muller": [
+        "Mise à niveau sur la partie IA",
+        "Recherche en cours de dataset pertinent."
+      ]
+    }
+  }
 }

@@ -1,105 +1,144 @@
 {
-    "PLDJsonFile": "./pld.json",
-    "ModulesPath": "./modules/",
-    "OutputType": "HTML",
-    "Filename": "pld.html",
-    "CssPath": "./assets/style.css",
-    "HtmlPrefix": "./assets/prefix",
-    "HtmlSufix": "./assets/sufix",
-    "Tags": {
+  "PLDJsonFile": "./pld.json",
+  "ModulesPath": "./modules/",
+  "OutputType": "HTML",
+  "Filename": "pld.html",
+  "CssPath": "./assets/style.css",
+  "HtmlPrefix": "./assets/prefix",
+  "HtmlSuffix": "./assets/suffix",
+  "ProjectName" :"Lansknet",
+  "FrontPage": {
+    "Title": "LANSKNET",
+    "Description": "Entrainer l'humain contre le hammeçonnage !",
+    "Image": "./assets/logo.png",
+    "Sprint" : "Sprint III FastForward",
+    "Schema" : "./assets/schema.jpg"
+  },
+  "Tags": {
+    "h1": [
+      "<h2 class=\"tilte\">",
+      "</h2>"
+    ],
+    "Section": [
+      "<div id=\"$LINK$\">",
+      "</div>"
+    ],
+    "TableOfContent":
+    {
+      "Content": [
+        "<p class=\"tableOfContents\"><a href=\"#$LINK$\">",
+        "</a></p>"
+      ],
+      "IndentedContent": [
+        "<p class=\"indentedTableOfContents\"><a href=\"#$LINK$\">",
+        "</a></p>"
+      ]
+    },
+    "DeliverablesMap": {
+      "TitleContainer": [
+        "<div class=\"Grid Grid--full u-textCenter\">",
+        "</div>"
+      ],
+      "Title": [
+        "<div class=\"Grid-cell\"><div class=\"Demo content-1of1\"><p class=\"deliveryMap\">",
+        "</p></div></div>"
+      ],
+      "Subtitle1Container": [
+        "<div class=\"Grid Grid--gutters Grid--cols-2 u-textCenter\">",
+        "</div>"
+      ],
+      "Subtitle2Container": [
+        "<div class=\"Grid Grid--gutters Grid--cols- u-textCenter\" style=\"height:1.5em;\">",
+        "</div>"
+      ],
+      "Subtitle": [
+        "<div class=\"Grid-cell\"><div class=\"Demo content-1of2\"><p class=\"deliveryMap\">",
+        "</p></div></div>"
+      ],
+      "Subtitle1": [
+        "<div class=\"Grid-cell\"><div class=\"Demo content-1of3\"><p class=\"deliveryMap\">",
+        "</p></div></div>"
+      ],
+      "Content": [
+        "",
+        ""
+      ]
+    },
+    "UserStories": {
+      "Container": [
+        "<div class=\"USContainer\">",
+        "</div>"
+      ],
+      "Name": [
+        "<h3  id=\"$LINK$\">",
+        "</h3>"
+      ],
+      "EstimatedTime": [
+        "<p class=\"indent\">",
+        "</p><br>"
+      ],
+      "Assignee": [
+        "<p class=\"indent\">",
+        "</p>"
+      ],
+      "Status": [
+        "<p class=\"indent\">",
+        "</p>"
+      ],
+      "Description": [
+        "<h4>",
+        "</h4><br>"
+      ],
+      "DescriptionText": [
+        "<p class=\"indent\">",
+        "</p><br>"
+      ],
+      "AsA": [
+        "<p class=\"indent\">",
+        "</p>"
+      ],
+      "IWant": [
+        "<p class=\"indent\">",
+        "</p>"
+      ],
+      "DoD": {
         "Section": [
-            "<h1>",
-            "</h1>"
+          "<h4>",
+          "</h4>"
         ],
-        "DeliverablesMap": {
-            "TitleContainer": [
-                "<div class=\"Grid Grid--full u-textCenter\">",
-                "</div>"
-            ],
-            "Title": [
-                "<div class=\"Grid-cell\"><div class=\"Demo content-1of1\"><p class=\"deliveryMap\">",
-                "</p></div></div>"
-            ],
-            "Subtitle1Container": [
-                "<div class=\"Grid Grid--gutters Grid--cols-2 u-textCenter\">",
-                "</div>"
-            ],
-            "Subtitle2Container": [
-                "<div class=\"Grid Grid--gutters Grid--cols-2 u-textCenter\" style=\"height:1.5em;\">",
-                "</div>"
-            ],
-            "Subtitle": [
-                "<div class=\"Grid-cell\"><div class=\"Demo content-1of2\"><p class=\"deliveryMap\">",
-                "</p></div></div>"
-            ],
-            "Content": [
-                "",
-                ""
-            ]
-        },
-        "UserStories": {
-            "Name": [
-                "<h2>",
-                "</h2>"
-            ],
-            "EstimatedTime": [
-                "<p>",
-                "</p>"
-            ],
-            "Description": [
-                "<h3>",
-                "</h3>"
-            ],
-            "DescriptionText": [
-                "<p>",
-                "</p>"
-            ],
-            "AsA": [
-                "<p>",
-                "</p>"
-            ],
-            "IWant": [
-                "<p>",
-                "</p>"
-            ],
-            "DoD": {
-                "Section": [
-                    "<h3>",
-                    "</h3>"
-                ],
-                "Description": [
-                    "<p>",
-                    "</p>"
-                ],
-                "Bullets": {
-                    "list": [
-                        "<ul>",
-                        "</ul>"
-                    ],
-                    "listElement": [
-                        "<li>",
-                        "</li>"
-                    ]
-                }
-            }
-        },
-        "AssignmentTable": {
-            "Table": [
-                "<table class=\"table-fill\">",
-                "</table>"
-            ],
-            "Th": [
-                "<th class=\"text-left\">",
-                "</th>"
-            ],
-            "Tr": [
-                "<tr class=\"text-left\">",
-                "</tr>"
-            ],
-            "Td": [
-                "<td>",
-                "</td>"
-            ]
+        "Description": [
+          "<ul class=\"indent\">",
+          "</ul>"
+        ],
+        "Bullets": {
+          "list": [
+            "<ul>",
+            "</ul>"
+          ],
+          "listElement": [
+            "<li class=\"dodElement\">",
+            "</li>"
+          ]
         }
+      }
+    },
+    "AssignmentTable": {
+      "Table": [
+        "<table class=\"table-fill\">",
+        "</table>"
+      ],
+      "Th": [
+        "<th class=\"text-left\">",
+        "</th>"
+      ],
+      "Tr": [
+        "<tr class=\"text-left\">",
+        "</tr>"
+      ],
+      "Td": [
+        "<td>",
+        "</td>"
+      ]
     }
+  }
 }

@@ -1,5 +1,5 @@
-#ifndef IWRITTER_HPP_
-#define IWRITTER_HPP_
+#ifndef IWRITER_HPP_
+#define IWRITER_HPP_
 
 #include <string>
 #include "AST.hpp"
@@ -8,17 +8,22 @@
 
 using Buffer = std::string;
 
-class IWritter : public IModule
+class IWriter : public IModule
 {
     public:
-        virtual ~IWritter() = default;
+        virtual ~IWriter() = default;
         virtual void write(AstPtr ast) = 0;
+		virtual void writeFunctionalSchema(Buffer& buffer) = 0;
+		virtual void writeFrontPage(Buffer &buffer) = 0;
         virtual void writeUserStories(Buffer &buffer, AstPtr ast) = 0;
         virtual void writeString(Buffer &buffer, AstPtr ast) = 0;
+		virtual void writeInt32(Buffer &buffer, AstPtr ast) = 0;
         virtual void writeDoD(Buffer &buffer, AstPtr ast) = 0;
         virtual void writeBullets(Buffer &buffer, AstPtr ast) = 0;
         virtual void writeAssignmentTable(Buffer &buffer, AstPtr ast) = 0;
         virtual void writeDeliverablesMap(Buffer &buffer, AstPtr ast) = 0;
+		virtual void writeTableOfContent(Buffer &buffer, AstPtr ast) = 0;
+		virtual void writeAdvancementReport(Buffer &buffer, AstPtr ast) = 0;
 };
 
-#endif /* !IWRITTER_HPP_ */
+#endif /* !IWRITER_HPP_ */
