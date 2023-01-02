@@ -115,7 +115,7 @@ In the `config.json` file we have to add new elements.
 which allows you to fully customize the document
 ## Features
 
-- Module creation, that allow HTML output, you can create your own
+- Module creation, that allow HTML output, you can Create your own
 - Application fully configurable with json files.
 
 

@@ -14,7 +14,7 @@ namespace Utils
 {
 	using Buffer = std::string;
 
-	inline void trim(std::string& str, char c)
+	inline void Trim(std::string& str, char c)
 	{
 		str.erase(std::remove_if(str.begin(), str.end(), [&](const auto& item)
 		{
@@ -22,7 +22,7 @@ namespace Utils
 		}), str.end());
 	}
 
-	inline void findAndReplace(Buffer& buffer, const std::string& toReplace, const std::string& replaceWith)
+	inline void FindAndReplace(Buffer& buffer, const std::string& toReplace, const std::string& replaceWith)
 	{
 		size_t pos = buffer.find(toReplace);
 		while (pos != std::string::npos)
@@ -33,7 +33,7 @@ namespace Utils
 	}
 
 	template<typename T>
-	void copyFileContent(T& buffer, const std::string& filename)
+	void CopyFileContent(T& buffer, const std::string& filename)
 	{
 		std::ifstream css(filename);
 		std::ostringstream ss;
@@ -126,7 +126,7 @@ namespace Utils
 	}
 
 	template<typename T>
-	void copyImageContent(T& buffer, const std::string& filename)
+	void CopyImageContent(T& buffer, const std::string& filename)
 	{
 		std::ifstream input(filename, std::ios::binary);
 		std::stringstream ss;

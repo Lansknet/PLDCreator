@@ -27,7 +27,7 @@ Config::Object StructuredData::getObject(const json& object)
 		else if (value.is_array())
 			config.push_back({ key, std::make_shared<Config::Node>(getArray(value)) });
 		else if (value.is_string())
-			config.push_back({ key, std::make_shared<Config::Node>(value.get<std::string>()) });
+			config.push_back({ key, std::make_shared<Config::Node>(value.get<Config::String>()) });
 		else if (value.is_primitive())
 			config.push_back({ key, getPrimitive(value)});
 		else throw std::logic_error("Unknow value type: " + value.dump());
@@ -47,7 +47,7 @@ Config::Array StructuredData::getArray(const json& array)
 		else if (value.is_array())
 			config.push_back(std::make_shared<Config::Node>(getArray(value)));
 		else if (value.is_string())
-			config.push_back(std::make_shared<Config::Node>(value.get<std::string>()));
+			config.push_back(std::make_shared<Config::Node>(value.get<Config::String>()));
 		else
 			throw std::logic_error("Unknow value type: " + value.dump());
 	}
@@ -67,5 +67,5 @@ Config::NodePtr StructuredData::getPrimitive(const json& primitive)
 	else if (primitive.is_boolean())
 		return std::make_shared<Config::Node>(primitive.get<Config::Bool>());
 	else
-		throw std::logic_error("Unknow value type: " + primitive.dump());
+		throw std::logic_error("Unknown value type: " + primitive.dump());
 }

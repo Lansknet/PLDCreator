@@ -6,25 +6,54 @@
   "CssPath": "./assets/style.css",
   "HtmlPrefix": "./assets/prefix",
   "HtmlSuffix": "./assets/suffix",
-  "ProjectName" :"Lansknet",
+  "ProjectName": "Lansknet",
   "FrontPage": {
     "Title": "LANSKNET",
     "Description": "Entrainer l'humain contre le hammeçonnage !",
     "Image": "./assets/logo.png",
-    "Sprint" : "Sprint III FastForward",
-    "Schema" : "./assets/schema.jpg"
+    "Sprint": "Sprint III FastForward",
+    "Schema": "./assets/schema.jpg"
   },
   "Tags": {
     "h1": [
       "<h2 class=\"tilte\">",
       "</h2>"
     ],
+    "Underline": [
+      "<span class=\"underline\">",
+      "</span>"
+    ],
     "Section": [
       "<div id=\"$LINK$\">",
       "</div>"
     ],
-    "TableOfContent":
-    {
+    "FrontPage": {
+      "Container": [
+        "<div class=\"FrontPage\">",
+        "</div>"
+      ],
+      "SprintName": [
+        "<h2 class=\"sprintName\">",
+        "</h2>"
+      ],
+      "Image": [
+        "<img alt=\"Logo\" id=\"logoCenter\" src=\"data:image/png;base64,",
+        "\"/>"
+      ],
+      "Title": [
+        "<h2>",
+        "</h2><br>"
+      ],
+      "Description": [
+        "<h3>",
+        "</h3>"
+      ],
+      "LastUpdate": [
+        "<p>",
+        "</p>"
+      ]
+    },
+    "TableOfContent": {
       "Content": [
         "<p class=\"tableOfContents\"><a href=\"#$LINK$\">",
         "</a></p>"
@@ -140,5 +169,21 @@
         "</td>"
       ]
     }
+  },
+  "Translations": {
+    "UserStories" : "User Stories",
+    "Assignee" : "Assigné(s) : ",
+    "EstimatedTime" : "Temps estimé : ",
+    "Status" : "Statut : ",
+    "Description" : "Description : ",
+    "AsA" : "En tant que : ",
+    "IWant" : "Je veux : ",
+    "DoD" : "Definition of Done",
+    "AssignmentTable" : "Tableau d'assignation",
+    "DeliverablesMap" : "Carte des livrables",
+    "TableOfContent" : "Table des matières",
+    "FunctionalSchema" : "Schéma fonctionnel",
+    "AdvancementReport" : "Rapport d'avancement",
+    "LastUpdate" : "Dernière mise à jour le $DATE$ à $TIME$"
   }
 }

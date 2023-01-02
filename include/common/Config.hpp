@@ -89,11 +89,17 @@ public:
     **/
     template <typename T> T &as() { return std::get<T>(_variant); }
 
+	Config::String &AsString() {return std::get<Config::String>(_variant);}
+	Config::Object &AsObject() {return std::get<Config::Object>(_variant);}
+	Config::Array &AsArray() {return std::get<Config::Array>(_variant);}
     /**
     * @brief Cast the node as const T
     * @return The type of the node
     **/
-    template <typename T> const T &as() const { return std::get<T>(_variant); }
+    template <typename T> [[nodiscard]] const T &as() const { return std::get<T>(_variant); }
+	[[nodiscard]] const Config::String &AsString() const {return std::get<Config::String>(_variant);}
+	[[nodiscard]] const Config::Object &AsObject() const {return std::get<Config::Object>(_variant);}
+	[[nodiscard]] const Config::Array &AsArray() const {return std::get<Config::Array>(_variant);}
 
     /**
     * @brief Cast the node as an Object

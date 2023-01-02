@@ -21,7 +21,7 @@
           "2.2 Finir le manager des IAs",
           "2.3 Module Python de communication entre l\u0027IA et son manager",
           "2.4 Programme d\u0027attaque v1",
-          "2.5 Page de s\u00E9lection de strat\u00E9gies pr\u00E9-d\u00E9termin\u00E9e",
+          "2.5 G\u00E9n\u00E9ration d\u0027emails via GPT-3",
           "4.3 Cr\u00E9er le \u0022Lansknet Ubiquitous Langage\u0022"
         ],
         "Backend": [
@@ -46,7 +46,7 @@
         "Description": "Pour que la page d\u0027informations soit accessible dans la nouvelle architecture Front en Vue.js.",
         "Assignee": "Vincent Darnige",
         "Status": "Open",
-        "EstimatedTime": 2,
+        "EstimatedTime": 3,
         "AsA": "Utilisateur de Lansknet",
         "IWant": "Pouvoir comprendre l\u0027int\u00E9r\u00EAt des pages \u00E0 ma disposition",
         "DoD": [
@@ -61,6 +61,10 @@
           {
             "Description": "Cr\u00E9ation de composants type \u0022carte\u0022 permettant aux utilisateurs de comprendre les autres pages de l\u0027application",
             "Bullets": []
+          },
+          {
+            "Description": "Cr\u00E9ation d\u0027un composant de type modale pr\u00E9sent sur le site rempla\u00E7ant la page ind\u00E9pendante",
+            "Bullets": []
           }
         ]
       },
@@ -69,7 +73,7 @@
         "Description": "Pour que la page de formation et de gestion de groupe soit adapt\u00E9e \u00E0 la nouvelle architecture Front en Vue.js.",
         "Assignee": "Vincent Darnige",
         "Status": "Open",
-        "EstimatedTime": 4,
+        "EstimatedTime": 3,
         "AsA": "Manager utilisant Lansknet",
         "IWant": "Visualiser clairement les groupes de campagnes d\u0027envoi en cours",
         "DoD": [
@@ -175,7 +179,7 @@
             "Bullets": []
           },
           {
-            "Description": "Cr\u00E9ation du visuel de la page de login \u00E0 l\u0027aide d\u0027un template",
+            "Description": "Cr\u00E9ation du visuel d'une page de login \u00E0 l\u0027aide d\u0027un template",
             "Bullets": []
           }
         ]
@@ -452,11 +456,19 @@
         "IWant": "Tester mes \u00E9quipes",
         "DoD": [
           {
-            "Description": "Entrain\u00E9 une premi\u00E8re IA de test via un proc\u00E9d\u00E9 de Machine Learning.",
+            "Description": "Créer un topic général",
             "Bullets": []
           },
           {
-            "Description": "Tester cette intelligence, et v\u00E9rifier un comportement coh\u00E9rent.",
+            "Description": "Définir des actions, les conditions d'activation",
+            "Bullets": []
+          },
+          {
+            "Description": "Faire un pattern matching entre les informations contenues dans l'organigramme en input et les \"actions\" à mettre dans un scénario d'attaque rendu sous format JSON.",
+            "Bullets": []
+          },
+          {
+            "Description": "Créer un module d'exécution dans lequel chaque action de la stratégie contenue dans le JSON est lu, puis exécuté correctement via le manager de l'IA.",
             "Bullets": []
           }
         ]
@@ -471,11 +483,15 @@
         "IWant": "D\u00E9couvrir Lansknet",
         "DoD": [
           {
-            "Description": "Une nouvelle page dans l\u0027application web permettant de s\u00E9lectionner une strat\u00E9gie",
+            "Description": "Convertir chaque action d'un scénario d'attaque en texte à compléter pour GPT3.",
             "Bullets": []
           },
           {
-            "Description": "Avoir au moins deux algorithme de prise de d\u00E9cision \u00E0 coder, capable de communiquer via le \u0022manager de l\u0027IA\u0022.",
+            "Description": "Récupérer un texte généré via GPT-3 en utilisant son API et formater ce texte de façon à ne conserver que la partie \"email\" (la partie générée).",
+            "Bullets": []
+          },
+          {
+            "Description": "Associer le mail à l'action dans le scénario d'attaque.",
             "Bullets": []
           }
         ]
@@ -527,6 +543,10 @@
           },
           {
             "Description": "/api/campaign/company/{id} Ajouter le total des campagnes - Arthur",
+            "Bullets": []
+          },
+          {
+            "Description": "/ai/email Récupérer tout les emails en fonction d'un employé, une entreprise, ou un service - Kallista",
             "Bullets": []
           }
         ]
@@ -701,7 +721,7 @@
       },
       {
         "Title": "4.3 Cr\u00E9er le \u0022Lansknet Ubiquitous Langage\u0022",
-        "Description": "Il est pr\u00E9f\u00E9rable d\u0027assurer la coh\u00E9rence des d\u00E9veloppement et des d\u00E9cisions de Lansknet au plus t\u00F4t dans le cycle de vie du projet. A cette fin, nous devons cr\u00E9er un langage non-ambigus tel que recommand\u00E9 par le Domain Driven Development.",
+        "Description": "Il est pr\u00E9f\u00E9rable d\u0027assurer la coh\u00E9rence des d\u00E9veloppements et des d\u00E9cisions de Lansknet au plus t\u00F4t dans le cycle de vie du projet. A cette fin, nous devons cr\u00E9er un langage non-ambigus tel que recommand\u00E9 par le Domain Driven Development.",
         "Assignee": "Julien Mertian de muller",
         "Status": "Open",
         "EstimatedTime": 2,
@@ -709,7 +729,7 @@
         "IWant": "Elimin\u00E9 toute ambigu\u00EFt\u00E9 sur le sens des termes utilis\u00E9s dans les dicussions internes.",
         "DoD": [
           {
-            "Description": "Un tableau contenant tout les mot-clefs en usage chez Lansknet ainsi qu\u0027une description de leurs significations d\u00E9taill\u00E9.",
+            "Description": "Un tableau contenant tout les mot-clefs en usage chez Lansknet, la traduction de ces mots-clefs en anglais, ainsi qu\u0027une description de leurs significations d\u00E9taill\u00E9e.",
             "Bullets": []
           },
           {
@@ -731,7 +751,7 @@
       ],
       "Julien Mertian de muller 10 J/H": [
         "2.4 Programme d\u0027attaque v1",
-        "2.5 Page de s\u00E9lection de strat\u00E9gies pr\u00E9-d\u00E9termin\u00E9e",
+        "2.5 G\u00E9n\u00E9ration d\u0027emails via GPT-3",
         "4.3 Cr\u00E9er le \u0022Lansknet Ubiquitous Langage\u0022"
       ],
       "Kallista Rhoc 12 J/H": [
@@ -769,32 +789,43 @@
     "AdvancementReport": {
       "Hugo Prevost": [
         "2.1 Documentation du protocole de communication entre l'IA et le manager - DOD: Créer un protocole de communication simple - Done - 1/2 JH, Documenter la communication côté IA - En cours - 1/2 JH, Documenter la communication côté Manager - En cours - 1/3 JH",
-        "2.2 Finir le manager des IAs - DOD: Pouvoir lancer et communiquer avec les IA - En cours - 1 JH, Pouvoir recevoir des requêtes de client web - 1/2 JH"
+        "2.2 Finir le manager des IAs - DOD:f Pouvoir lancer et communiquer avec les IA - En cours - 1 JH, Pouvoir recevoir des requêtes de client web - 1/2 JH"
       ],
       "Kallista Rhoc": [
         "3.6 Réorganiser le code - DOD Séparation des modèles et des routes (BE, IA), Séparation de l'initialisation de BDD 2/2 JH",
         "Amélioration du PLDMaker"
       ],
       "Arthur Vasseur": [
-        "3.6 Réorganiser le code : Séparation des modèles et des routes (BE, IA), Séparation de l'initialisation de l'app 2/2 JH",
-        "Amélioration du PLDMaker"
+        "3.1 Création de nouvelles routes - En cours 2/3 JH",
+        "3.5 Ajouter des données à la base de données - Finie 2/2 JH",
+        "4.2 Améliorer la sécurité de nos services - Fini 1/1 JH",
+        "4.1 Automatisation du déploiement - Fini 1/1 JH"
       ],
       "Ewen Le-Letty": [
-        "1.5 Formation Vue js - Page login - DOD: Créer une page de login  1/2 JH"
+        "1.5 Formation Vue Js - Page login - DOD : Réalisation du tutoriel - Fini - 1/2 JH",
+        "1.5 Formation Vue Js - Page login - DOD : Création du visuel d'une page de login à l'aide d'un template - Fini - 1/2 JH",
+        "1.9 Re-travail de la page de login préexistante - DOD : Assurer la liaison entre le bouton \"forgotten password,\" et son action dans le Back de l'application - Fini - 0.5/2 JH",
+        "1.9 Re-travail de la page de login préexistante - DOD : Assurer la liaison entre le bouton \"sign-up,\" et son action dans le Back de l'application - Fini - 0.5/2 JH",
+        "1.9 Re-travail de la page de login préexistante - DOD : Assurer la liaison entre le bouton \"sign-in,\" et la route correspondante dans le Back de l'application - Fini - 0.5/2 JH",
+        "1.9 Re-travail de la page de login préexistante - DOD : Assurer la liaison entre le bouton \"sign-in,\" et la route correspondante dans le Back de l'application - Fini - 0.5/2 JH",
+        "1.8 Refonte en Vue js, de la page Dashboard - DOD : Afficher de manière dynamique le nombre de mails ouverts par un secteur d'activité - Fini - 2/4 JH",
+        "1.8 Refonte en Vue js, de la page Dashboard - DOD : Afficher de manière dynamique le nombre de liens cliqués par un secteur d'activité - Fini - 1/4 JH",
+        "1.8 Refonte en Vue js, de la page Dashboard - DOD : Afficher de manière dynamique le nombre de liens cliqués par un secteur d'activité - Fini - 1/4 JH"
       ],
       "Vincent Guionnet": [
-        "1.10 Formation Vue js - Page web type DOD: Compréhension de l'agencement visuel des composants dans un cadre de page en html 0.5/2 JH",
-        "1.11 Création de la page Détails DOD: Agencer la page détail en fonction des composants nécessaires - En cours 0.5/6 JH"
+        "1.10 Formation Vue js - Page web type - DOD: Compréhension de l'agencement visuel des composants dans un cadre de page en html - Fini",
+        "1.11 Création de la page Détails - Création des composants cartes \"Mails ouverts\", \"Liens cliqués\", \"Données partagées\" - Fini \n Création du méta-composant \"Campagne\" - Fini \n  Agencer la page détail en fonction des composants nécessaires - Fini \n Gestion des appels aux routes pour récupérer les inforations des campagnes en cours - En cours - 4/6 JH"
       ],
       "Vincent Darnige": [
-        "1.1 Refonte de la page Information en Vue.js - DOD: Création de composants type \"carte\" permettant aux utilisateurs de comprendre les autres pages de l'application - Fini - 0,5/2 JH",
-        "1.2 Refonte de la page Groupe en Vue.js - DOD: Création de composant visuel englobant  un \"Groupe\" d'utilisateurs - Fini - 0,5/4 JH",
-        "1.3 Amélioration des boutons de gestion des groupes - DOD: Création d'un composant bouton \"Création de groupe\" au sein de la page web \"Groupe\"- Fini - 0,5/3 JH",
-        "1.4 Création de la page Souscription en Vue.js - DOD: Création de composants visuel d'abonnement \"1 mois\", \"1 an\",\"3 mois\", \"6 mois\" permettant l'ajout de temp d'utilisation de la solution  via un appel de routes transmettant l'information au back de l'application -En cours - 1/3  JH"
+        "1.1 Refonte de la page Information en Vue.js - DOD : Prise en main de l'outil Figma via un tutoriel –Fini - 0,5/3 JH",
+        "1.1 Refonte de la page Information en Vue.js - DOD : Production d'une maquette interactive de la page via Figma –En cours - 0,5/3 JH ",
+        "1.1 Refonte de la page Information en Vue.js - DOD : Création d'un composant de type modale présent sur le site remplaçant la page indépendante – Fini - 1/3 JH",
+        "1.2 Refonte de la page Groupe en Vue.js - DOD : Création d'une condition permettant la visualisation de la page uniquement par les statuts \"Manager\" et non tous les utilisateurs. – Fini – 1/3JH"
       ],
       "Julien Mertian de muller": [
-        "Mise à niveau sur la partie IA",
-        "Recherche en cours de dataset pertinent."
+        "2.4 Choix technologique et recherche - Fini - 3/3 JH",
+        "2.5 Programme d'attaque v1 - En cours - 1/4 JH",
+        "4.3 Créer le \"Lansknet Ubiquitous Langage\" - Fini - 2/2 JH"
       ]
     }
   }

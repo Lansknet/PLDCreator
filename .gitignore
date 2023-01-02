@@ -35,5 +35,4 @@
 .idea
 .xmake
 CMakeLists.txt
-.cmake-build-debug
-.build
+build

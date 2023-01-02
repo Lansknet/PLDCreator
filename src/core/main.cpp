@@ -20,10 +20,10 @@ int main(int argc, const char** argv)
 
 		for (auto& mod: ml.getModules())
 		{
-			if (mod->getName() == config["OutputType"].as<String>())
+			if (mod->GetName() == config["OutputType"].as<String>())
 			{
-				mod->create(config);
-				mod->write(pld.getAst());
+				mod->Create(config);
+				mod->Write(pld.getAst());
 			}
 		}
 	}

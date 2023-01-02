@@ -12,18 +12,18 @@ class IWriter : public IModule
 {
     public:
         virtual ~IWriter() = default;
-        virtual void write(AstPtr ast) = 0;
-		virtual void writeFunctionalSchema(Buffer& buffer) = 0;
-		virtual void writeFrontPage(Buffer &buffer) = 0;
-        virtual void writeUserStories(Buffer &buffer, AstPtr ast) = 0;
-        virtual void writeString(Buffer &buffer, AstPtr ast) = 0;
-		virtual void writeInt32(Buffer &buffer, AstPtr ast) = 0;
-        virtual void writeDoD(Buffer &buffer, AstPtr ast) = 0;
-        virtual void writeBullets(Buffer &buffer, AstPtr ast) = 0;
-        virtual void writeAssignmentTable(Buffer &buffer, AstPtr ast) = 0;
-        virtual void writeDeliverablesMap(Buffer &buffer, AstPtr ast) = 0;
-		virtual void writeTableOfContent(Buffer &buffer, AstPtr ast) = 0;
-		virtual void writeAdvancementReport(Buffer &buffer, AstPtr ast) = 0;
+        virtual void Write(AstPtr ast) = 0;
+		virtual void WriteFunctionalSchema(Buffer& buffer) = 0;
+		virtual void WriteFrontPage(Buffer &buffer) = 0;
+        virtual void WriteUserStories(Buffer &buffer, AstPtr ast) = 0;
+        virtual void WriteString(Buffer &buffer, AstPtr ast) = 0;
+		virtual void WriteInt32(Buffer &buffer, AstPtr ast) = 0;
+        virtual void WriteDoD(Buffer &buffer, AstPtr ast) = 0;
+        virtual void WriteBullets(Buffer &buffer, AstPtr ast) = 0;
+        virtual void WriteAssignmentTable(Buffer &buffer, AstPtr ast) = 0;
+        virtual void WriteDeliverablesMap(Buffer &buffer, AstPtr ast) = 0;
+		virtual void WriteTableOfContent(Buffer &buffer, AstPtr ast) = 0;
+		virtual void WriteAdvancementReport(Buffer &buffer, AstPtr ast) = 0;
 };
 
 #endif /* !IWRITER_HPP_ */
