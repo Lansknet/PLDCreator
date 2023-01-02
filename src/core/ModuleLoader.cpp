@@ -16,7 +16,7 @@ ModuleLoader::ModuleLoader(const Config::Object &data) : _modulesPath(data["Modu
 	}
 }
 
-std::vector<LibraryInstance>& ModuleLoader::getModules()
+std::vector<LibraryInstance>& ModuleLoader::GetModules()
 {
     return _libraries;
 }

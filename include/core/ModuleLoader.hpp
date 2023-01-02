@@ -9,7 +9,7 @@
 class ModuleLoader {
     public:
         ModuleLoader(const Config::Object &data);
-        std::vector<LibraryInstance> &getModules();
+        std::vector<LibraryInstance> &GetModules();
         ~ModuleLoader() = default;
 
     private:

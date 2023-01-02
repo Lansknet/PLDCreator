@@ -12,51 +12,52 @@
 
 PLDValidator::PLDValidator(const Config::Object& data)
 {
-	_ast = parseRoot(data);
+	_ast = ParseRoot(data);
 }
 
-AstPtr PLDValidator::getAst()
+AstPtr PLDValidator::GetAst()
 {
 	return std::move(_ast);
 }
 
-AstPtr PLDValidator::parseRoot(const Config::Object& object)
+AstPtr PLDValidator::ParseRoot(const Config::Object& object)
 {
 	AstPtr ast = std::make_unique<AST>(AST::Type::Root);
 	for (auto& [key, value]: object)
 	{
 		if (key == "UserStories")
-			ast->next.push_back(parseUserStories(value->as<Config::Array>()));
+			ast->next.push_back(ParseUserStories(value->as<Config::Array>()));
 		else if (key == "AssignmentTable")
-			ast->next.push_back(parseAssignmentTable(value->as<Config::Object>()));
+			ast->next.push_back(ParseAssignmentTable(value->as<Config::Object>()));
 		else if (key == "DeliverablesMap")
-			ast->next.push_back(parseDeliverablesMap(value->as<Config::Array>()));
+			ast->next.push_back(ParseDeliverablesMap(value->as<Config::Array>()));
 		else if (key == "AdvancementReport")
-			ast->next.push_back(parseAdvancementReport(value->as<Config::Object>()));
+			ast->next.push_back(ParseAdvancementReport(value->as<Config::Object>()));
 		else if (key.starts_with("Sprint"))
 		{
-			ast->next.push_back(parseRoot(value->as<Config::Object>()));
-			ast->next.back()->next.insert(ast->next.back()->next.begin(), parseTableOfContent(object.begin()->second->as<Config::Object>()));
+			ast->next.push_back(ParseRoot(value->as<Config::Object>()));
+			ast->next.back()->next.insert(ast->next.back()->next.begin(),
+					ParseTableOfContent(object.begin()->second->as<Config::Object>()));
 		}
 		else throw std::runtime_error("Invalid key in root: " + key);
 	}
 	return ast;
 }
 
-AstPtr PLDValidator::parseTableOfContent(const Config::Object& object)
+AstPtr PLDValidator::ParseTableOfContent(const Config::Object& object)
 {
 	AstPtr ast = std::make_unique<AST>(AST::Type::TableOfContent);
 	for (auto& [key, value]: object)
 	{
 		auto any = std::any(key);
 		if (key == "UserStories")
-			ast->next.push_back(parseUserStoriesTableOfContent(value->as<Config::Array>()));
+			ast->next.push_back(ParseUserStoriesTableOfContent(value->as<Config::Array>()));
 		else ast->next.push_back(std::make_unique<AST>(AST::Type::TableOfContentEntry, std::move(any)));
 	}
 	return ast;
 }
 
-AstPtr PLDValidator::parseUserStoriesTableOfContent(const Config::Array & object)
+AstPtr PLDValidator::ParseUserStoriesTableOfContent(const Config::Array & object)
 {
 	AstPtr ast = std::make_unique<AST>(AST::Type::TableOfContentEntry);
 	ast->value = std::string("UserStories");
@@ -69,7 +70,7 @@ AstPtr PLDValidator::parseUserStoriesTableOfContent(const Config::Array & object
 	return ast;
 }
 
-AstPtr PLDValidator::parseUserStories(const Config::Array& array)
+AstPtr PLDValidator::ParseUserStories(const Config::Array& array)
 {
 	//TODO: this function should be refactored, or AST struct should be changed
 	AstPtr ast = std::make_unique<AST>(AST::Type::UserStories);
@@ -114,7 +115,7 @@ AstPtr PLDValidator::parseUserStories(const Config::Array& array)
 			}
 			else if (key == "DoD")
 			{
-				ast->next.push_back(parseDoD(value->as<Config::Array>()));
+				ast->next.push_back(ParseDoD(value->as<Config::Array>()));
 			}
 			else throw std::logic_error("Invalid key in userStories: " + value->as<Config::String>());
 		}
@@ -122,7 +123,7 @@ AstPtr PLDValidator::parseUserStories(const Config::Array& array)
 	return ast;
 }
 
-AstPtr PLDValidator::parseDoD(const Config::Array& array)
+AstPtr PLDValidator::ParseDoD(const Config::Array& array)
 {
 	AstPtr ast = std::make_unique<AST>(AST::Type::DoDArray);
 	for (auto& dod: array)
@@ -137,7 +138,7 @@ AstPtr PLDValidator::parseDoD(const Config::Array& array)
 			}
 			else if (key == "Bullets")
 			{
-				astDod->next.push_back(parseBullets(value->as<Config::Array>()));
+				astDod->next.push_back(ParseBullets(value->as<Config::Array>()));
 			}
 			else throw std::logic_error("Invalid key in DoD: " + value->as<Config::String>());
 		}
@@ -146,7 +147,7 @@ AstPtr PLDValidator::parseDoD(const Config::Array& array)
 	return ast;
 }
 
-AstPtr PLDValidator::parseBullets(const Config::Array& array)
+AstPtr PLDValidator::ParseBullets(const Config::Array& array)
 {
 	AstPtr ast = std::make_unique<AST>(AST::Type::Bullets);
 	std::vector<Config::String> bullets;
@@ -158,7 +159,7 @@ AstPtr PLDValidator::parseBullets(const Config::Array& array)
 	return ast;
 }
 
-AstPtr PLDValidator::parseAssignmentTable(const Config::Object& array)
+AstPtr PLDValidator::ParseAssignmentTable(const Config::Object& array)
 {
 	AstPtr ast = std::make_unique<AST>(AST::Type::AssignmentTable);
 	using Assignements = std::unordered_map<std::string, std::vector<std::string>>;
@@ -176,7 +177,7 @@ AstPtr PLDValidator::parseAssignmentTable(const Config::Object& array)
 	return ast;
 }
 
-AstPtr PLDValidator::parseDeliverablesMap(const Config::Array& array)
+AstPtr PLDValidator::ParseDeliverablesMap(const Config::Array& array)
 {
 	AstPtr ast = std::make_unique<AST>(AST::Type::DeliverablesMap);
 	using DeliverablesMap = std::unordered_map<std::string, std::vector<std::string>>;
@@ -198,7 +199,7 @@ AstPtr PLDValidator::parseDeliverablesMap(const Config::Array& array)
 	return ast;
 }
 
-AstPtr PLDValidator::parseAdvancementReport(const Config::Object& object)
+AstPtr PLDValidator::ParseAdvancementReport(const Config::Object& object)
 {
 	AstPtr ast = std::make_unique<AST>(AST::Type::AdvancementReport);
 	using Assignements = std::unordered_map<std::string, std::vector<std::string>>;

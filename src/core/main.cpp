@@ -13,17 +13,17 @@ int main(int argc, const char** argv)
 	{
 		using namespace Config;
 		StructuredData parser("config.json");
-		const Config::Object& config = parser.getConfig();
+		const Config::Object& config = parser.GetConfig();
 		StructuredData pldFile(config["PLDJsonFile"].as<String>());
 		ModuleLoader ml(config);
-		PLDValidator pld(pldFile.getConfig());
+		PLDValidator pld(pldFile.GetConfig());
 
-		for (auto& mod: ml.getModules())
+		for (auto& mod: ml.GetModules())
 		{
 			if (mod->GetName() == config["OutputType"].as<String>())
 			{
 				mod->Create(config);
-				mod->Write(pld.getAst());
+				mod->Write(pld.GetAst());
 			}
 		}
 	}
